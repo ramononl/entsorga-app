@@ -1,0 +1,3384 @@
+{
+  "data": [
+    {
+      "name": "Ackerbühlstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Adlerweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Aehrenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Albulastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Alexanderstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Allemannweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Alpsteinweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Alte Schanfiggerstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Amselweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Anemonenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Aquasanastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Araschgerstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Arcas",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Arellastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Arlibonstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Arnikaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Arosastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Arvenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Aspermontstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Austrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Badusstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bahnhof Haldenstein",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bahnhofstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bahnhofplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Balzersgasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bankstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Barblanstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bärenloch",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Belmontstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Berggasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Berninaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bienenstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Birkenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Blumenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bodmerstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bolettastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bondastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Böschenstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Brandisstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Brändligasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Brotlaube",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Buchenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bühlerweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bühlweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bündtestrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Bungertweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Cadonaustrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Calandastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Calunastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Calunaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Calvenweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Campodelsweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Carmennaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Casinoplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Comandergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Comercialstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dachsweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dahliastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Daleustrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dalpweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dammweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Deutsche Strasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dianaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Distelweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dornenäuliweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dreibündenstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Dreibündenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Durannaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Eblinweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Eggerstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Eichenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Eisbahnweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Emmaweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Emser Strasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Engadinstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Enzianweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Erikaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Erlenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Eulenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Fadäraweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Falkenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Falknisstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Felsenaustrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Fliederweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Florastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Florentinistrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Florentiniweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Flüelaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Föhrenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Fondeiweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Fontanastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Foppaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Foralweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Fortunastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Freifeldstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Freifeldweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Friedauweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Furkaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Fürstenwaldstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Gansplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Gartenstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Gäuggelistrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Gemsweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Giacomettistrasse",
+      "numbers": [
+        {
+          "tour": 3,
+          "nrVon": 1,
+          "nrBis": 59
+        },
+        {
+          "tour": 2,
+          "nrVon": 60,
+          "nrBis": 136
+        }
+      ]
+    },
+    {
+      "name": "Glockengasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Goldgasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Grabenstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Grischunaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Grossbruggerweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Grünbergstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Grünbergweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Gürtelstrasse",
+      "numbers": [
+        {
+          "tour": 1,
+          "nrVon": 1,
+          "nrBis": 14
+        },
+        {
+          "tour": 3,
+          "nrVon": 15,
+          "nrBis": 41
+        },
+        {
+          "tour": 2,
+          "nrVon": 42,
+          "nrBis": 92
+        }
+      ]
+    },
+    {
+      "name": "Guschaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Güterstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Halbmil",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Halde",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Haldensteinstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Haldenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hartbertstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Heckenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hegisplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Heidiweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Heimstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Heroldstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Herrengasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hinterm Bach",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hirschbühlweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hirschweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hof",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hofgraben",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hofstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Hohenbühlweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Höhenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Holunderweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Huberstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Im Baumgarten",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Industriestrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Irmaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Jochstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Juchserweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Julierweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Jüstliweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kälberweideweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kalchbühlstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kalkofenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kaltbrunnstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kantenstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Karlihofplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kasernenstrasse",
+      "numbers": [
+        {
+          "tour": 1,
+          "nrVon": 1,
+          "nrBis": 139
+        },
+        {
+          "tour": 3,
+          "nrVon": 140,
+          "nrBis": 163
+        }
+      ]
+    },
+    {
+      "name": "Kauffmannstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kettweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kirchgasse Chur",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kirchgasse Masans",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Klostergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kornplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kornquaderweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Krähenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kreuzfeldweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kreuzgasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kronengasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kronenhofweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kupfergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kupferschmiedeweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Kurfirstenstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lachenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lagerstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Langenjohnstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "La-Nicca-Strasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Laubenstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lerchenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lichtensteinweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lindenquai",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lochertstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Loëstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lukmaniergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Lürlibadstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Madrisaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Maienweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Majorangasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Majoranplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Malixerstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Maltesergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Marschlinsweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Masanserstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Mattenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Meiersboden",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Meierweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Mittelweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Montalinplatz",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Montalinstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Mühleplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Mundaunweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Münzweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Museumsplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Museumstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Myrthenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Nelkenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Neubruchstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Nikolaigasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Nordstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Oberalpstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Obere Gasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Obere Plessurstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Obertor",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Oldisweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Ottoplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Ottostrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Palmenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Paradiesgasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Paradiesplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Pargherastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Pfistergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Pfisterplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Pizokelweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Planaterrastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Plantaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Plessurquai",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Postplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Poststrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Prasserieweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Prätschliweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Praximergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Primelweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Pulvermühlestrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Quaderstrasse",
+      "numbers": [
+        {
+          "tour": 1,
+          "nrVon": 1,
+          "nrBis": 23
+        },
+        {
+          "tour": 2,
+          "nrVon": 24,
+          "nrBis": 40
+        }
+      ]
+    },
+    {
+      "name": "Rabengasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Raschärenstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rascherengässli",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rathausgasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rätusstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rebhaldenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Reichsgasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Reitnauerweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rheinfelsstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rheingässli",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rheinmühleweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rheinstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Richtstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rigastrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Ringstrasse",
+      "numbers": [
+        {
+          "tour": 1,
+          "nrVon": 1,
+          "nrBis": 15
+        },
+        {
+          "tour": 3,
+          "nrVon": 16,
+          "nrBis": 131
+        },
+        {
+          "tour": 2,
+          "nrVon": 132,
+          "nrBis": 205
+        }
+      ]
+    },
+    {
+      "name": "Rohanstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rosenhügelweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rosenweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rossbodenstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rotbuchenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Roterturmstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Rotplattenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Ruchenbergstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sägenstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Salisstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Saluferstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Salvatorenstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sandstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sapünweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sardonastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sassalstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sattelweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Scalärastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Scalettastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Scesaplanaweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Scharfrichtergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schellenbergstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schellenbergweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schönbergstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schönbühlstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schönmattweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schützenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Schwanengasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Segantinistrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Segnesweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Seidengut",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Seilerbahnweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sennensteinstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sennhofstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Signinastrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Silserweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Silvrettastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Solariaweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sommeraustrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sonnenbergstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sonnenstutz",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sonnenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sonnhaldenstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Spechtweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Splügenstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Sportplatzweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Spundisstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "St. Antönienweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "St. Luzistrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "St. Margrethenstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "St. Martinsplatz",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Stadtgartenweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Stampastrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Steinbockstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Steinbruchstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Stelleweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Storchengasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Strelaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Susenbühlstrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Süsswinkelgasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tellostrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Teuchelweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Theaterweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tittwiesenstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tivolistrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tödistrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Traubenweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Triststrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tristweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tschingelweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tschuggenstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Tulpenweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Turnerweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Untere Gasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Untere Plessurstrasse",
+      "numbers": [
+        {
+          "tour": 1,
+          "nrVon": 1,
+          "nrBis": 27
+        },
+        {
+          "tour": 3,
+          "nrVon": 28,
+          "nrBis": 152
+        }
+      ]
+    },
+    {
+      "name": "Vazerolgasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Vereinaweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Vilanstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Vogelsangweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Wachtelweg",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Waffenplatzstrasse",
+      "tour": 3,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Wagnergasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Walserweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Waisenhausstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Weinbergstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Weisshornweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Weisstorkelgasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Welschdörfli",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Werkstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Weststrasse",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Wiesentalstrasse",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Wingertweg",
+      "tour": 2,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Winterbergweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    },
+    {
+      "name": "Zedernweg",
+      "tour": 1,
+      "numbers": [
+        {
+          "nrVon": 0,
+          "nrBis": 0
+        }
+      ]
+    }
+  ]
+}
