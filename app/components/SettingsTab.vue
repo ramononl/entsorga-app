@@ -86,6 +86,10 @@ export default {
       if (property !== "setPushNotifications" && !this.userPushPaper && !this.userPushCarton) {
         this.$store.commit("setPushNotifications", false);
       }
+      if (property === "setPushNotifications" && this.userPushNotifications) {
+        this.$store.commit("setPushPaper", true);
+        this.$store.commit("setPushCarton", true);
+      }
     }
   }
 }
