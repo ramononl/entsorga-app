@@ -15,22 +15,22 @@
         <Label text="Mitteilungen" class="section-description"/>
         <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first action-item-switch">
           <Label text="Mitteilungen anzeigen" class="text-primary"/>
-          <Switch :checked="userPushNotifications" @checkedChange="changePush($event, 'setPushNotifications')"/>
+          <Switch :checked="userPushNotifications" @tap="switchReady = true" @checkedChange="changePush($event, 'setPushNotifications')"/>
         </FlexboxLayout>
         <FlexboxLayout v-if="userPushNotifications" justifyContent="space-between" alignItems="center" class="action-item action-item-switch">
           <Label text="Mitteilungen für Papier" class="text-primary"/>
-          <Switch v-if="userPushNotifications" :checked="userPushPaper" @checkedChange="changePush($event, 'setPushPaper')"/>
+          <Switch v-if="userPushNotifications" @tap="switchReady = true" :checked="userPushPaper" @checkedChange="changePush($event, 'setPushPaper')"/>
         </FlexboxLayout>
         <FlexboxLayout v-if="userPushNotifications" justifyContent="space-between" alignItems="center" class="action-item action-item-switch">
           <Label text="Mitteilungen für Karton" class="text-primary"/>
-          <Switch v-if="userPushNotifications" :checked="userPushCarton" @checkedChange="changePush($event, 'setPushCarton')"/>
+          <Switch v-if="userPushNotifications" @tap="switchReady = true" :checked="userPushCarton" @checkedChange="changePush($event, 'setPushCarton')"/>
         </FlexboxLayout>
         
         <Label text="Zeitpunkt der Mitteilungen" class="section-description"/>
         <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first" @tap="showPushTimeSelect">
           <Label text="Termin" class="text-primary" flexGrow="0"/>
           <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
-            <Label :text="pushDay + ' um ' + pushTime + ' Uhr'" class="text-secondary text-right"/>
+            <Label :text="pushDayList[pushDay] + ' um ' + pushTime + ' Uhr'" class="text-secondary text-right"/>
             <StackLayout>
               <Image src="res://appicons/icon-cheveron-right" stretch="none" class="m-l-10"/>
             </StackLayout>
@@ -44,8 +44,18 @@
 <script>
 import StreetSelect from "./secondary/StreetSelect";
 import PushTimeSelect from "./secondary/PushTimeSelect";
+import { pushHandling } from '../mixins/pushHandling';
 
 export default {
+  data() {
+    return {
+      newPushNotifications: null,
+      newPushPaper: null,
+      newPushCarton: null,
+      switchReady: false
+    }
+  },
+  mixins: [pushHandling],
   computed: {
     userStreetName() {
       return this.$store.state.user.streetName;
@@ -62,11 +72,11 @@ export default {
     userPushCarton() {
       return this.$store.state.user.pushCarton;
     },
-    // streetNames() {
-    //   return this.$store.state.streetNames;
-    // },
     pushDay() {
       return this.$store.state.user.pushDay;
+    },
+    pushDayList() {
+      return this.$store.state.listOfPushDays;
     },
     pushTime() {
       let hour = this.$store.state.user.pushTime.hour.toString();
@@ -86,9 +96,16 @@ export default {
       if (property !== "setPushNotifications" && !this.userPushPaper && !this.userPushCarton) {
         this.$store.commit("setPushNotifications", false);
       }
+      if (property === "setPushNotifications" && !this.userPushNotifications) {
+        this.$store.commit("setPushPaper", false);
+        this.$store.commit("setPushCarton", false);
+      }
       if (property === "setPushNotifications" && this.userPushNotifications) {
         this.$store.commit("setPushPaper", true);
         this.$store.commit("setPushCarton", true);
+      }
+      if (this.switchReady) {
+        this.createNotifications();
       }
     }
   }
