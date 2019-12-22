@@ -44,10 +44,10 @@ export default {
   },
   methods: {
     onItemTap(event) {
-      if (event.item.numbers.length > 1) {
+      if (event.item.numbers.length) {
         this.$navigateTo(StreetNumberSelect, {
           props: {
-            streetName: event.item.name,
+            streetName: event.item,
           }
         });
       } else {
