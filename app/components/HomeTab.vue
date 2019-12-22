@@ -2,6 +2,9 @@
   <ScrollView class="page-bg">
     <FlexboxLayout flexDirection="column" justifyContent="center" class="p-y-20">
       <Label textWrap="true" text="Meine nächsten Sammeltermine" class="h1 p-x-20"/>
+      <!-- <Button @tap="onTapHasPermission" class="btn" text="Has Permission?"></Button> -->
+      <!-- <Button @tap="createNotifications" class="btn" text="Schedule Notification"></Button> -->
+      <!-- <Button @tap="cancelAllNotifications" class="btn" text="Cancel notifications"></Button> -->
       <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first">
         <Label text="Tour" class="text-primary" flexGrow="0"/>
         <Label :text="tour" class="text-secondary"/>
@@ -9,52 +12,61 @@
       <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first" @tap="showAllPaper = !showAllPaper">
         <Label text="Papier" class="text-primary" flexGrow="0"/>
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
-          <Label class="text-secondary text-right" :text="days[nextPaper.weekday] + ', ' +  nextPaper.day + '. ' + months[nextPaper.month] + ' ' + nextPaper.year" />
+          <Label class="text-secondary text-right" :text="days[nextPaper.weekday] + ' ' +  nextPaper.day + '. ' + months[nextPaper.month] + ' ' + nextPaper.year" />
           <StackLayout>
-            <Image src="res://appicons/icon-plus-circle" stretch="none" class="m-l-10"/>
+            <Image v-if="!showAllPaper" src="res://appicons/icon-plus-circle" stretch="none" class="m-l-10"/>
+            <Image v-else src="res://appicons/icon-minus-circle" stretch="none" class="m-l-10"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
       <StackLayout v-if="showAllPaper" class="all-dates">
-        <Label class="p-y-10 text-secondary" v-for="(date, index) in futurePaper" :key="index" :text="days[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
+        <Label class="p-y-10 text-secondary" v-for="(date, index) in futurePaper" :key="index" :text="daysFull[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
       <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first" @tap="showAllCarton = !showAllCarton">
         <Label text="Karton" class="text-primary" flexGrow="0"/>
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
-          <Label class="text-secondary text-right" :text="days[nextCarton.weekday] + ', ' +  nextCarton.day + '. ' + months[nextCarton.month] + ' ' + nextCarton.year" />
+          <Label class="text-secondary text-right" :text="days[nextCarton.weekday] + ' ' +  nextCarton.day + '. ' + months[nextCarton.month] + ' ' + nextCarton.year" />
           <StackLayout>
-            <Image src="res://appicons/icon-plus-circle" stretch="none" class="m-l-10"/>
+            <Image v-if="!showAllCarton" src="res://appicons/icon-plus-circle" stretch="none" class="m-l-10"/>
+            <Image v-else src="res://appicons/icon-minus-circle" stretch="none" class="m-l-10"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
       <StackLayout v-if="showAllCarton" class="all-dates">
-        <Label class="p-y-10 text-secondary" v-for="(date, index) in futureCarton" :key="index" :text="days[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
+        <Label class="p-y-10 text-secondary" v-for="(date, index) in futureCarton" :key="index" :text="daysFull[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
     </FlexboxLayout>
   </ScrollView>
 </template>
 
 <script>
+// import { pushHandling } from "../mixins/pushHandling";
+import dates from "~/assets/dates.json";
+
 export default {
   data() {
     return {
       days: ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."],
+      daysFull: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
       months: [
         "Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"
       ],
       showAllPaper: false,
-      showAllCarton: false
+      showAllCarton: false,
+      dates: dates.tours
     }
   },
+  // mixins: [pushHandling],
   computed: {
     tour() {
       return this.$store.state.user.tour;
     },
     paperDates() {
       let tour = this.tour;
-      let paperDates = this.$store.state.dates.paper[tour];
+      let paperDates = this.dates.paper[tour];
       let parsedDates = [];
       let today = new Date();
+      today.setDate(today.getDate() - 1);
 
       for (let i = 0; i < paperDates.length; i++) {
         let date = new Date(paperDates[i]);
@@ -83,9 +95,10 @@ export default {
     },
     cartonDates() {
       let tour = this.tour;
-      let cartonDates = this.$store.state.dates.carton[tour];
+      let cartonDates = this.dates.carton[tour];
       let parsedDates = [];
       let today = new Date();
+      today.setDate(today.getDate() - 1);
 
       for (let i = 0; i < cartonDates.length; i++) {
         let date = new Date(cartonDates[i]);
