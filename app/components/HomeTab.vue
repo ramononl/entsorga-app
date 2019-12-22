@@ -16,7 +16,7 @@
         </FlexboxLayout>
       </FlexboxLayout>
       <StackLayout v-if="showAllPaper" class="all-dates">
-        <Label class="p-y-10 text-secondary" v-if="index > 0" v-for="(date, index) in paperDates" :key="index" :text="days[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
+        <Label class="p-y-10 text-secondary" v-for="(date, index) in futurePaper" :key="index" :text="days[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
       <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first" @tap="showAllCarton = !showAllCarton">
         <Label text="Karton" class="text-primary" flexGrow="0"/>
@@ -28,7 +28,7 @@
         </FlexboxLayout>
       </FlexboxLayout>
       <StackLayout v-if="showAllCarton" class="all-dates">
-        <Label class="p-y-10 text-secondary" v-if="index > 0" v-for="(date, index) in cartonDates" :key="index" :text="days[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
+        <Label class="p-y-10 text-secondary" v-for="(date, index) in futureCarton" :key="index" :text="days[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
     </FlexboxLayout>
   </ScrollView>
@@ -38,7 +38,7 @@
 export default {
   data() {
     return {
-      days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
+      days: ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."],
       months: [
         "Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"
       ],
@@ -63,7 +63,7 @@ export default {
         }
       }
 
-      let dateObjects = {};
+      let dateObjects = [];
       for (let i = 0; i < parsedDates.length; i++) {
         dateObjects[i] = {
           weekday: parsedDates[i].getDay(),
@@ -78,6 +78,9 @@ export default {
     nextPaper() {
       return this.paperDates[0];
     },
+    futurePaper() {
+      return this.paperDates.slice(1,5);
+    },
     cartonDates() {
       let tour = this.tour;
       let cartonDates = this.$store.state.dates.carton[tour];
@@ -91,7 +94,7 @@ export default {
         }
       }
 
-      let dateObjects = {};
+      let dateObjects = [];
       for (let i = 0; i < parsedDates.length; i++) {
         dateObjects[i] = {
           weekday: parsedDates[i].getDay(),
@@ -106,10 +109,8 @@ export default {
     nextCarton() {
       return this.cartonDates[0];
     },
-  },
-  methods: {
-    onButtonTap: function() {
-      console.log("Nächste Sammeltermine anzeigen");
+    futureCarton() {
+      return this.cartonDates.slice(1,5);
     }
   }
 }
