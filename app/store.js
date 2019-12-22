@@ -2,8 +2,6 @@ import Vue from "vue";
 import Vuex from "vuex";
 import * as ApplicationSettings from "application-settings";
 
-import dates from "~/assets/dates.json";
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -15,13 +13,22 @@ export default new Vuex.Store({
       pushNotifications: true,
       pushPaper: true,
       pushCarton: true,
-      pushDay: "Am Abholtag",
+      pushDay: 0,
       pushTime: {
         hour: 7,
         minute: 30
       }
     },
-    dates: dates.tours
+    listOfPushDays: [
+      "Am Abholtag",
+      "1 Tag vorher",
+      "2 Tage vorher",
+      "3 Tage vorher",
+      "4 Tage vorher",
+      "5 Tage vorher",
+      "6 Tage vorher",
+      "7 Tage vorher"
+    ]
   },
   mutations: {
     load(state) {
