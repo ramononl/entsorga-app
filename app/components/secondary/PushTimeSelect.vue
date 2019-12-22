@@ -7,7 +7,7 @@
     </ActionBar>
     <StackLayout class="page-bg">
       <Label text="Tag der Benachrichtigung" class="section-description"/>
-      <ListPicker :items="listOfPushDays" v-model="pushDay" class="text-primary action-item action-item-first"/>
+      <ListPicker :items="listOfPushDays" :selectedIndex="pushDay" @selectedIndexChange="selectedIndexChanged($event.value)" class="text-primary action-item action-item-first"/>
       <Label text="Uhrzeit der Benachrichtigung" class="section-description"/>
       <TimePicker v-model="pushTime" minuteInterval="5" class="text-primary action-item action-item-first"/>
     </StackLayout>
@@ -16,39 +16,21 @@
 
 <script>
 import App from "../App";
+import { pushHandling } from '../../mixins/pushHandling';
 
 export default {
   data() {
     return {
-      listOfPushDays: [
-        'Am Abholtag',
-        '1 Tag vorher',
-        '2 Tage vorher',
-        '3 Tage vorher',
-        '4 Tage vorher',
-        '5 Tage vorher',
-        '6 Tage vorher',
-        '7 Tage vorher'
-      ],
       newPushDay: null,
       newPushHour: null,
       newPushMinute: null
     }
   },
+  mixins: [pushHandling],
   computed: {
-    pushDay: {
-      get() {
-        this.newPushDay = this.$store.state.user.pushDay;
-        return this.$store.state.user.pushDay;
-      },
-      set(value) {
-        if (value) {
-          this.newPushDay = this.listOfPushDays[value]
-        } else {
-          this.newPushDay = this.listOfPushDays[0]
-        }
-        console.log(this.newPushDay);
-      }
+    pushDay() {
+      this.newPushDay = this.$store.state.user.pushDay;
+      return this.$store.state.user.pushDay;
     },
     pushTime: {
       get() {
@@ -63,14 +45,24 @@ export default {
         this.newPushHour = value.getHours();
         this.newPushMinute = value.getMinutes();
       }
+    },
+    listOfPushDays() {
+      return this.$store.state.listOfPushDays;
     }
   },
   methods: {
+    selectedIndexChanged(value) {
+      this.newPushDay = value;
+      console.log(this.newPushDay);
+    },
     onItemTap() {
       this.$store.commit('setPushDay', this.newPushDay)
       this.$store.commit("setPushHour", this.newPushHour);
       this.$store.commit("setPushMinute", this.newPushMinute);
+      
       // create push notifications
+      this.createNotifications();
+
       this.$navigateTo(App, {
         clearHistory: true,
         props: {
