@@ -14,6 +14,7 @@
 
 <script>
 import App from "../App";
+import { pushHandling } from '../../mixins/pushHandling';
 
 export default {
   props: ['streetName'],
@@ -23,6 +24,7 @@ export default {
       invalid: false
     }
   },
+  mixins: [pushHandling],
   methods: {
     showKeyboard({ object }) {
       if (object.android) {
@@ -56,6 +58,7 @@ export default {
         this.$store.commit('setTour', tour);
         
         // create push notifications
+        this.createNotifications();
         
         this.$navigateTo(App, {
           clearHistory: true,

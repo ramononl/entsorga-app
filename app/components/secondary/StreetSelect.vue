@@ -21,6 +21,7 @@
 <script>
 import ranges from "~/assets/ranges.json";
 import StreetNumberSelect from "./StreetNumberSelect";
+import { pushHandling } from '../../mixins/pushHandling';
 
 export default {
   data() {
@@ -29,6 +30,7 @@ export default {
       streetNames: ranges.data
     }
   },
+  mixins: [pushHandling],
   computed: {
     filteredNames() {
       let term = this.searchBar.toLowerCase();
@@ -44,7 +46,7 @@ export default {
   },
   methods: {
     onItemTap(event) {
-      if (event.item.numbers.length) {
+      if (event.item.numbers) {
         this.$navigateTo(StreetNumberSelect, {
           props: {
             streetName: event.item,
@@ -54,7 +56,10 @@ export default {
         this.$store.commit('setStreetName', event.item.name);
         this.$store.commit('setStreetNumber', "");
         this.$store.commit('setTour', event.item.tour);
+        
         // create push notifications
+        this.createNotifications();
+
         this.$navigateBack();
       }
     }
