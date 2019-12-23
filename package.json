@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@nativescript/theme": "^2.2.1",
+    "nativescript-carousel": "^6.1.1",
     "nativescript-local-notifications": "^4.1.4",
     "nativescript-vue": "^2.4.0",
     "tns-core-modules": "^6.0.0",
