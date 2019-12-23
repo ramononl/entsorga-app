@@ -32,9 +32,29 @@ $red-700: #c53030;
 $red-800: #9b2c2c;
 $red-900: #742a2a;
 
+$pink-100: #FAE8F7;
+$pink-200: #F2C7EA;
+$pink-300: #EBA5DE;
+$pink-400: #DB61C5;
+$pink-500: #CC1DAC;
+$pink-600: #B81A9B;
+$pink-700: #7A1167;
+$pink-800: #5C0D4D;
+$pink-900: #3D0934;
+
+$violet-100: #EDE6F6;
+$violet-200: #D2C1E9;
+$violet-300: #B79BDB;
+$violet-400: #8051C0;
+$violet-500: #4A06A5;
+$violet-600: #430595;
+$violet-700: #2C0463;
+$violet-800: #21034A;
+$violet-900: #160232;
+
 // Assign colors
 $primary: $gray-900;
 $secondary: $gray-700;
-$complementary: $green-500;
-$accent: $green-500;
-$complementary-color: $green-100;
+$complementary: $violet-500;
+$complementary-color: $violet-100;
+$accent: $pink-500;
