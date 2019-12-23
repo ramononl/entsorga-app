@@ -1,38 +1,36 @@
 <template>
-  <ScrollView class="page-bg">
-    <FlexboxLayout flexDirection="column" justifyContent="center" class="p-y-20">
+  <ScrollView class="w-full">
+    <FlexboxLayout flexDirection="column" justifyContent="center" class="page-padding">
       <Label textWrap="true" text="Meine nächsten Sammeltermine" class="h1 p-x-20"/>
-      <!-- <Button @tap="onTapHasPermission" class="btn" text="Has Permission?"></Button> -->
-      <!-- <Button @tap="createNotifications" class="btn" text="Schedule Notification"></Button> -->
-      <!-- <Button @tap="cancelAllNotifications" class="btn" text="Cancel notifications"></Button> -->
-      <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first">
-        <Label text="Tour" class="text-primary" flexGrow="0"/>
-        <Label :text="tour" class="text-secondary"/>
+      <!-- <Button @tap="onTapHasPermission" class="btn" text="Has Permission?"></Button>
+      <Button @tap="createNotifications" class="btn" text="Schedule Notification"></Button>
+      <Button @tap="cancelAllNotifications" class="btn" text="Cancel notifications"></Button> -->
+      <FlexboxLayout justifyContent="space-between" alignItems="center" flexWrap="wrap" class="action-item action-item-first rounded-sm">
+        <Label text="Adresse" class="text-primary font-bold" flexGrow="0"/>
+        <Label :text="userAddress" class="text-secondary"/>
       </FlexboxLayout>
-      <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first" @tap="showAllPaper = !showAllPaper">
-        <Label text="Papier" class="text-primary" flexGrow="0"/>
+      <FlexboxLayout justifyContent="space-between" alignItems="center" :class="[showAllPaper ? 'rounded-t-sm' : 'rounded-sm']" class="action-item action-item-first" @tap="showAllPaper = !showAllPaper">
+        <Label text="Papier" class="text-primary font-bold" flexGrow="0"/>
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label class="text-secondary text-right" :text="days[nextPaper.weekday] + ' ' +  nextPaper.day + '. ' + months[nextPaper.month] + ' ' + nextPaper.year" />
           <StackLayout>
-            <Image v-if="!showAllPaper" src="res://appicons/icon-plus-circle" stretch="none" class="m-l-10"/>
-            <Image v-else src="res://appicons/icon-minus-circle" stretch="none" class="m-l-10"/>
+            <Image :class="[showAllPaper ? 'rotate-90' : 'rotate-0']" src="res://appicons/icon-cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
-      <StackLayout v-if="showAllPaper" class="all-dates">
+      <StackLayout v-if="showAllPaper" class="all-dates border-gray-800 border-t rounded-b-sm">
         <Label class="p-y-10 text-secondary" v-for="(date, index) in futurePaper" :key="index" :text="daysFull[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
-      <FlexboxLayout justifyContent="space-between" alignItems="center" class="action-item action-item-first" @tap="showAllCarton = !showAllCarton">
-        <Label text="Karton" class="text-primary" flexGrow="0"/>
+      <FlexboxLayout justifyContent="space-between" alignItems="center" :class="[showAllCarton ? 'rounded-t-sm' : 'rounded-sm']" class="action-item action-item-first" @tap="showAllCarton = !showAllCarton">
+        <Label text="Karton" class="text-primary font-bold" flexGrow="0"/>
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label class="text-secondary text-right" :text="days[nextCarton.weekday] + ' ' +  nextCarton.day + '. ' + months[nextCarton.month] + ' ' + nextCarton.year" />
           <StackLayout>
-            <Image v-if="!showAllCarton" src="res://appicons/icon-plus-circle" stretch="none" class="m-l-10"/>
-            <Image v-else src="res://appicons/icon-minus-circle" stretch="none" class="m-l-10"/>
+            <Image :class="[showAllCarton ? 'rotate-90' : 'rotate-0']" src="res://appicons/icon-cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
-      <StackLayout v-if="showAllCarton" class="all-dates">
+      <StackLayout v-if="showAllCarton" class="all-dates border-gray-800 border-t rounded-b-sm">
         <Label class="p-y-10 text-secondary" v-for="(date, index) in futureCarton" :key="index" :text="daysFull[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
     </FlexboxLayout>
@@ -60,6 +58,12 @@ export default {
   computed: {
     tour() {
       return this.$store.state.user.tour;
+    },
+    userAddress() {
+      let streetName = this.$store.state.user.streetName;
+      let streetNumber = this.$store.state.user.streetNumber;
+      let tour = this.tour;
+      return `${streetName} ${streetNumber} (Tour ${tour})`;
     },
     paperDates() {
       let tour = this.tour;
