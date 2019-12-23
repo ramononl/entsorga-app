@@ -5,7 +5,7 @@
       <NavigationButton text="" visibility="collapsed"/>
       <ActionItem @tap="onItemTap" ios.systemIcon="3" ios.position="right" text="Sichern" android.position="popup" />
     </ActionBar>
-    <StackLayout class="page-bg">
+    <StackLayout class="page-bg-secondary">
       <Label text="Tag der Benachrichtigung" class="section-description"/>
       <ListPicker :items="listOfPushDays" :selectedIndex="pushDay" @selectedIndexChange="selectedIndexChanged($event.value)" class="text-primary action-item action-item-first"/>
       <Label text="Uhrzeit der Benachrichtigung" class="section-description"/>
