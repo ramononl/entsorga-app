@@ -1,0 +1,112 @@
+{
+  "types": [
+    {
+      "name": "Batterien",
+      "desc": "In den Batteriesammelbehälter oder in der Multisammelstelle"
+    },
+    {
+      "name": "Bauschutt",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Büchsen/Dosen",
+      "desc": "In den Büchsenmolok von 07.00 bis 20.00 Uhr oder in der Multisammelstelle"
+    },
+    {
+      "name": "Büroelektronik",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Chemikalien",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Elektro-Haushaltgeräte",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Fahrzeugbatterien",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Farben und Lacke",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Gewerbekehricht",
+      "desc": "In Container (Container ist bewilligungspflichtig)"
+    },
+    {
+      "name": "Glas",
+      "desc": "In den Glasmolok von 07.00 bis 20.00 Uhr oder in der Multisammelstelle"
+    },
+    {
+      "name": "Karton",
+      "desc": "Nur gebündelt am Abfuhrtag oder in der Multisammelstelle"
+    },
+    {
+      "name": "Kompostierbare Abfälle/Grüngut",
+      "desc": "In der Multisammelstelle, in der Stadtgärtnerei oder in Containern an den Sammeltagen"
+    },
+    {
+      "name": "Kunststoffe",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Leuchtmittel",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Medikamente",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Metall",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Motorenöl",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Nicht-Gebührensäcke",
+      "desc": "Nur in der Multisammelstelle"
+    },
+    {
+      "name": "Papier",
+      "desc": "Nur gebündelt am Abfuhrtag oder in der Multisammelstelle"
+    },
+    {
+      "name": "PET",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    },
+    {
+      "name": "Reifen und Räder",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Speiseöl",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Sperrgut",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Tetrapack",
+      "desc": "Im churersack, nicht mit der Kartonsammlung"
+    },
+    {
+      "name": "Textilien, Kleider",
+      "desc": "In der Multisammelstelle"
+    },
+    {
+      "name": "Tierkadaver",
+      "desc": "Tierkörpersammelstelle Reitnauerweg 31"
+    },
+    {
+      "name": "Unterhaltungselektronik",
+      "desc": "In der Multisammelstelle oder bei der Verkaufsstelle"
+    }
+  ]
+}
