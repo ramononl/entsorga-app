@@ -56,7 +56,7 @@ export default {
       console.log(this.newPushDay);
     },
     onItemTap() {
-      this.$store.commit('setPushDay', this.newPushDay)
+      this.$store.commit('setPushDay', this.newPushDay);
       this.$store.commit("setPushHour", this.newPushHour);
       this.$store.commit("setPushMinute", this.newPushMinute);
       
