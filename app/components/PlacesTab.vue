@@ -1,6 +1,6 @@
 <template>
-  <ScrollView class="page-bg">
-    <FlexboxLayout flexDirection="column" justifyContent="center">
+  <ScrollView class="w-full">
+    <FlexboxLayout flexDirection="column" justifyContent="center" class="page-padding">
       <Label text="Standorte" />
     </FlexboxLayout>
   </ScrollView>
