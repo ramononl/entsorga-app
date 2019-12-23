@@ -8,16 +8,16 @@ export default new Vuex.Store({
   state: {
     setupDone: false,
     user: {
-      streetName: "Adlerweg",
-      streetNumber: 4,
-      tour: 1,
-      pushNotifications: true,
-      pushPaper: true,
-      pushCarton: true,
-      pushDay: 0,
+      streetName: null,
+      streetNumber: null,
+      tour: null,
+      pushNotifications: null,
+      pushPaper: null,
+      pushCarton: null,
+      pushDay: null,
       pushTime: {
-        hour: 7,
-        minute: 30
+        hour: null,
+        minute: null
       }
     },
     listOfPushDays: [
@@ -41,6 +41,9 @@ export default new Vuex.Store({
           )
         );
       }
+    },
+    setSetupDone(state, name) {
+      state.setupDone = name;
     },
     setStreetName(state, name) {
       state.user.streetName = name;
