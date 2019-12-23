@@ -1,20 +1,30 @@
 <template>
-  <Page>
-    <ActionBar title="entsorga" android:flat="true"/>
-    <TabView :selectedIndex="selectedIndex" @selectedIndexChange="indexChange" iosIconRenderingMode="alwaysTemplate" selectedTabTextColor="#53ba82" tabTextColor="#718096">
-      <TabViewItem title="Startseite" iconSource="res://tabicons/home">
-        <HomeTab class="p-30"></HomeTab>
-      </TabViewItem>
-      <TabViewItem title="Standorte"  iconSource="res://tabicons/map">
-        <PlacesTab class="p-30"></PlacesTab>
-      </TabViewItem>
-      <TabViewItem title="Infos"  iconSource="res://tabicons/recycle">
-        <InfosTab class="p-30"></InfosTab>
-      </TabViewItem>
-      <TabViewItem title="Einstellungen"  iconSource="res://tabicons/cog">
-        <SettingsTab></SettingsTab>
-      </TabViewItem>
-    </TabView>
+  <Page class="page-bg">
+    <DockLayout stretchLastChild="true">
+      <Label text="entsorga" dock="top" class="app-name border-b border-white-transparent"/>
+      <GridLayout dock="bottom" columns="*,*,*,*" rows="50" class="tab-navigation">
+        <FlexboxLayout row="0" col="0" :class="[index === 0 ? 'active' : '']" @tap="tabChange(0)">
+          <Image src="res://tabicons/startseite" stretch="none"/>
+          <Label text="Startseite"/>
+        </FlexboxLayout>
+        <FlexboxLayout row="0" col="1" :class="[index === 1 ? 'active' : '']" @tap="tabChange(1)">
+          <Image src="res://tabicons/standorte" stretch="none"/>
+          <Label text="Standorte"/>
+        </FlexboxLayout>
+        <FlexboxLayout row="0" col="2" :class="[index === 2 ? 'active' : '']" @tap="tabChange(2)">
+          <Image src="res://tabicons/infos" stretch="none"/>
+          <Label text="Infos"/>
+        </FlexboxLayout>
+        <FlexboxLayout row="0" col="3" :class="[index === 3 ? 'active' : '']" @tap="tabChange(3)">
+          <Image src="res://tabicons/einstellungen" stretch="none"/>
+          <Label text="Einstellungen"/>
+        </FlexboxLayout>
+      </GridLayout>
+      <HomeTab v-show="index === 0"/>
+      <PlacesTab v-show="index === 1"/>
+      <InfosTab v-show="index === 2"/>
+      <SettingsTab v-show="index === 3"/>
+    </DockLayout>
   </Page>
 </template>
 
@@ -35,7 +45,9 @@
       }
     },
     data() {
-      return {}
+      return {
+        index: this.selectedIndex
+      }
     },
     mounted() {
       this.$store.subscribe((mutations, state) => {
@@ -44,9 +56,8 @@
       this.$store.commit("load");
     },
     methods: {
-      indexChange(args) {
-        let newIndex = args.value
-        console.log('Current tab index: ' + newIndex)
+      tabChange(selectedIndex) {
+        this.index = selectedIndex;
       }
     }
   }
