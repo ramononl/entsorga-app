@@ -1,8 +1,9 @@
 <template>
   <Page class="page-bg">
     <DockLayout stretchLastChild="true">
-      <Label text="entsorga" dock="top" class="app-name border-b border-white-transparent"/>
-      <GridLayout dock="bottom" columns="*,*,*,*" rows="50" class="tab-navigation">
+      <LogoBar/>
+      <Setup v-if="!setupDone"/>
+      <GridLayout v-if="setupDone" dock="bottom" columns="*,*,*,*" rows="50" class="tab-navigation">
         <FlexboxLayout row="0" col="0" :class="[index === 0 ? 'active' : '']" @tap="tabChange(0)">
           <Image src="res://tabicons/startseite" stretch="none"/>
           <Label text="Startseite"/>
@@ -20,15 +21,17 @@
           <Label text="Einstellungen"/>
         </FlexboxLayout>
       </GridLayout>
-      <HomeTab v-show="index === 0"/>
-      <PlacesTab v-show="index === 1"/>
-      <InfosTab v-show="index === 2"/>
-      <SettingsTab v-show="index === 3"/>
+      <HomeTab v-if="index === 0 && setupDone"/>
+      <PlacesTab v-if="index === 1 && setupDone"/>
+      <InfosTab v-if="index === 2 && setupDone"/>
+      <SettingsTab v-if="index === 3 && setupDone"/>
     </DockLayout>
   </Page>
 </template>
 
 <script>
+  import Setup from "./Setup";
+  import LogoBar from "./common/LogoBar";
   import * as ApplicationSettings from "application-settings";
   import HomeTab from "./HomeTab";
   import PlacesTab from "./PlacesTab";
@@ -37,7 +40,7 @@
   
   export default {
     name: 'Main',
-    components: { HomeTab, PlacesTab, InfosTab, SettingsTab },
+    components: { Setup, LogoBar, HomeTab, PlacesTab, InfosTab, SettingsTab },
     props: {
       selectedIndex: {
         type: Number,
@@ -47,6 +50,11 @@
     data() {
       return {
         index: this.selectedIndex
+      }
+    },
+    computed: {
+      setupDone() {
+        return this.$store.state.setupDone;
       }
     },
     mounted() {
