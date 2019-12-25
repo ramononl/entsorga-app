@@ -17,14 +17,14 @@
         v-model="streetNumber"
         @loaded="showKeyboard"
         hint="Hausnummer"
-        maxlength="3"
+        maxLength="3"
         autocorrect="false"
         returnKeyType="done"
         keyboardType="phone"
       />
       <Label
         v-if="invalid"
-        text="Bitte geben Sie eine gültige Hausnummer an."
+        text="Bitte geben Sie eine gültige Hausnummer ein."
         textWrap="true"
         class="text-center text-danger p-x-20 m-t-30"
       />
@@ -71,11 +71,9 @@ export default {
             this.streetNumber <= numbers[i].nrBis
           ) {
             tour = numbers[i].tour;
-            break ;
+            break;
           }
         }
-
-        console.log(tour);
 
         this.$store.commit("setStreetName", this.streetName.name);
         this.$store.commit("setStreetNumber", this.streetNumber);
@@ -99,5 +97,4 @@ export default {
 </script>
 
 <style>
-
 </style>
