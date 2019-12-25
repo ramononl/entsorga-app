@@ -1,23 +1,22 @@
 <template>
-  <Page class="page-bg">
+  <Page class="page-bg" actionBarHidden="true">
     <DockLayout stretchLastChild="true">
       <LogoBar/>
-      <Setup v-if="!setupDone"/>
-      <GridLayout v-if="setupDone" dock="bottom" columns="*,*,*,*" rows="50" class="tab-navigation">
+      <GridLayout dock="bottom" columns="*,*,*,*" rows="50" class="tab-navigation">
         <FlexboxLayout row="0" col="0" :class="[index === 0 ? 'active' : '']" @tap="tabChange(0)">
-          <Image src="res://tabicons/startseite" stretch="none"/>
+          <Image src="res://startseite" stretch="none"/>
           <Label text="Startseite"/>
         </FlexboxLayout>
         <FlexboxLayout row="0" col="1" :class="[index === 1 ? 'active' : '']" @tap="tabChange(1)">
-          <Image src="res://tabicons/standorte" stretch="none"/>
+          <Image src="res://standorte" stretch="none"/>
           <Label text="Standorte"/>
         </FlexboxLayout>
         <FlexboxLayout row="0" col="2" :class="[index === 2 ? 'active' : '']" @tap="tabChange(2)">
-          <Image src="res://tabicons/infos" stretch="none"/>
+          <Image src="res://infos" stretch="none"/>
           <Label text="Infos"/>
         </FlexboxLayout>
         <FlexboxLayout row="0" col="3" :class="[index === 3 ? 'active' : '']" @tap="tabChange(3)">
-          <Image src="res://tabicons/einstellungen" stretch="none"/>
+          <Image src="res://einstellungen" stretch="none"/>
           <Label text="Einstellungen"/>
         </FlexboxLayout>
       </GridLayout>
@@ -30,7 +29,6 @@
 </template>
 
 <script>
-  import Setup from "./Setup";
   import LogoBar from "./common/LogoBar";
   import * as ApplicationSettings from "application-settings";
   import HomeTab from "./HomeTab";
@@ -40,7 +38,7 @@
   
   export default {
     name: 'Main',
-    components: { Setup, LogoBar, HomeTab, PlacesTab, InfosTab, SettingsTab },
+    components: { LogoBar, HomeTab, PlacesTab, InfosTab, SettingsTab },
     props: {
       selectedIndex: {
         type: Number,
