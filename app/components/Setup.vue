@@ -1,132 +1,150 @@
 <template>
-  <StackLayout class="page-padding h-full">
-    <Carousel v-show="step === 1" height="200" width="100%" pageChanged="myChangeEvent" pageTapped="mySelectedEvent" indicatorColor="#ffffff" finite="true" bounce="true" showIndicator="true" verticalAlignment="top" android:indicatorAnimation="swap" color="white">
-      <CarouselItem id="slide1" verticalAlignment="middle" horizontalAlignment="center">
-        <Image src="res://tabicons/startseite" stretch="none" horizontalAlignment="center"/>
-        <Label text="Slide 1" class="text-center"/>
-      </CarouselItem>
-      <CarouselItem id="slide2" verticalAlignment="middle" horizontalAlignment="center">
-        <Image src="res://tabicons/startseite" stretch="none" horizontalAlignment="center"/>
-        <Label text="Slide 2" class="text-center"/>
-      </CarouselItem>
-      <CarouselItem id="slide3" verticalAlignment="middle" horizontalAlignment="center">
-        <Image src="res://tabicons/startseite" stretch="none" horizontalAlignment="center"/>
-        <Label text="Slide 3" class="text-center"/>
-      </CarouselItem>
-      <CarouselItem id="slide4" verticalAlignment="middle" horizontalAlignment="center">
-        <Image src="res://tabicons/startseite" stretch="none" horizontalAlignment="center"/>
-        <Label text="Slide 4" class="text-center"/>
-      </CarouselItem>
-    </Carousel>
-    <StackLayout v-show="step === 2" class="w-full" height="70%">
-      <Label text="Strasse wählen" class="h1 p-x-20"/>
-      <SearchBar v-model="searchBar" hint="Strasse suchen..." class="m-t-10 rounded-sm"/>
-      <StackLayout class="rounded-b-sm bg-white-transparent">
-        <ListView for="streetName in filteredNames" separatorColor="gray" @itemTap="onItemTap">
-          <v-template>
-            <GridLayout height="45">
-              <Label :text="streetName.name" class="p-20"/>
-            </GridLayout>
-          </v-template>
-        </ListView>
+  <Page class="page-bg" actionBarHidden="true">
+    <DockLayout stretchLastChild="true">
+      <LogoBar />
+      <StackLayout class="p-20">
+        <AppInfo @nextstep="nextStep" v-if="step === 'AppInfo'" />
+        <SetupStreetSelect
+          @nextstep="nextStep"
+          @storestreet="storeStreet"
+          @storetour="storeTour"
+          @storenumber="storeNumber"
+          v-if="step === 'SetupStreetSelect'"
+        />
+        <SetupStreetNumberSelect
+          :streetName="streetObj"
+          @nextstep="nextStep"
+          @storetour="storeTour"
+          @storenumber="storeNumber"
+          v-if="step === 'SetupStreetNumberSelect'"
+        />
+        <SetupPushSelect
+          :streetName="streetObj"
+          @nextstep="nextStep"
+          @storepush="storePush"
+          @storepaper="storePaper"
+          @storecarton="storeCarton"
+          @pushday="storeDay"
+          @pushhour="storeHour"
+          @pushminute="storeMinute"
+          @setstore="setStore"
+          v-if="step === 'SetupPushSelect'"
+        />
+        <SetupPushTimeSelect
+          @pushday="storeDay"
+          @pushhour="storeHour"
+          @pushminute="storeMinute"
+          @setstore="setStore"
+          v-if="step === 'SetupPushTimeSelect'"
+        />
       </StackLayout>
-    </StackLayout>
-    <StackLayout v-show="step === 3" class="w-full">
-      <Label :text="selectedStreet.name" class="text-center text-lg m-t-30 text-pink-100" />
-      <TextField
-        class="bg-white border-gray-800 border rounded-sm m-x-20 m-y-10 p-x-20 p-y-30 text-center text-20"
-        v-model="streetNumber"
-        hint="Hausnummer"
-        maxlength="3"
-        autocorrect="false"
-        returnKeyType="done"
-        keyboardType="phone"
-      />
-      <Label
-        v-if="invalid"
-        text="Bitte geben Sie eine gültige Hausnummer an."
-        textWrap="true"
-        class="text-center text-danger p-x-20 m-t-30"
-      />
-    </StackLayout>
-    <StackLayout v-show="step === 4" class="w-full">
-      <Label text="Benachrichtigungen wählen" class="h1 p-x-20"/>
-    </StackLayout>
-    <StackLayout v-show="step === 5" class="w-full">
-      <Label text="Zeitpunkt wählen" class="h1 p-x-20"/>
-    </StackLayout>
-    <FlexboxLayout height="50" class="w-full m-t-30">
-      <Label v-show="step > 1" @tap="tapBack" text="Zurück" flexGrow="1" class="bg-white-transparent p-x-10 p-y-10 text-center rounded-sm m-x-30"/>
-      <Label v-show="step !== 2" @tap="tapContinue" text="Weiter" flexGrow="1" class="bg-white-transparent p-x-10 p-y-10 text-center rounded-sm m-x-30"/>
-    </FlexboxLayout>
-  </StackLayout>
+    </DockLayout>
+  </Page>
 </template>
 
 <script>
+import * as ApplicationSettings from "application-settings";
+import LogoBar from "./common/LogoBar";
 import App from "./App";
-import ranges from "~/assets/ranges.json";
+
+import { pushHandling } from '../mixins/pushHandling';
+
+import AppInfo from "./setup/AppInfo";
+import SetupStreetSelect from "./setup/SetupStreetSelect";
+import SetupStreetNumberSelect from "./setup/SetupStreetNumberSelect";
+import SetupPushSelect from "./setup/SetupPushSelect";
+import SetupPushTimeSelect from "./setup/SetupPushTimeSelect";
 
 export default {
+  components: {
+    LogoBar,
+    AppInfo,
+    SetupStreetSelect,
+    SetupStreetNumberSelect,
+    SetupPushSelect,
+    SetupPushTimeSelect
+  },
   data() {
     return {
-      step: 1,
-      searchBar: '',
-      streetNames: ranges.data,
-      selectedStreet: {},
-      streetNumber: '',
-      invalid: false
-    }
+      step: "AppInfo",
+      streetName: null,
+      streetObj: null,
+      streetNumber: null,
+      tour: null,
+      pushNotifications: null,
+      pushPaper: null,
+      pushCarton: null,
+      pushDay: null,
+      pushTime: {
+        hour: null,
+        minute: null
+      }
+    };
   },
   computed: {
-    filteredNames() {
-      let term = this.searchBar.toLowerCase();
-      if (term !== '') {
-        let filteredNames = this.streetNames.filter(function(value) {
-          let name = value.name.toLowerCase();
-          if (name.indexOf(term) > -1) return value;
-        });
-        return filteredNames;
-      }
-      return this.streetNames;
+    getApp() {
+      return ApplicationSettings.getString("store");
     }
   },
+  mixins: [pushHandling],
   methods: {
-    // tapContinue() {
-    //   this.$store.commit('setSetupDone', true)
-    // }
-    tapBack() {
-      if (this.step > 1) {
-        this.step--;
-      }
+    nextStep(value) {
+      this.step = value;
     },
-    tapContinue() {
-      if (this.step === 3) {
-        let numbers = this.selectedStreet.numbers;
-        let numberOfDivisions = numbers.length;
+    storeStreet(value) {
+      this.streetObj = value;
+      this.streetName = value.name;
+    },
+    storeNumber(value) {
+      this.streetNumber = value;
+    },
+    storeTour(value) {
+      this.tour = value;
+    },
+    storePush(value) {
+      this.pushNotifications = value;
+    },
+    storePaper(value) {
+      this.pushPaper = value;
+    },
+    storeCarton(value) {
+      this.pushCarton = value;
+    },
+    storeDay(value) {
+      this.pushDay = value;
+    },
+    storeHour(value) {
+      this.pushTime.hour = value;
+    },
+    storeMinute(value) {
+      this.pushTime.minute = value;
+    },
+    setStore() {
+      this.$store.commit("setSetupDone", true);
+      this.$store.commit("setStreetName", this.streetName);
+      this.$store.commit("setStreetNumber", this.streetNumber);
+      this.$store.commit("setTour", this.tour);
+      this.$store.commit("setPushNotifications", this.pushNotifications);
+      this.$store.commit("setPushPaper", this.pushPaper);
+      this.$store.commit("setPushCarton", this.pushCarton);
+      this.$store.commit("setPushDay", this.pushDay);
+      this.$store.commit("setPushHour", this.pushTime.hour);
+      this.$store.commit("setPushMinute", this.pushTime.minute);
 
-        // only if valid
-        if (this.streetNumber <= numbers[numberOfDivisions - 1].nrBis) {
-          this.invalid = false;
-          this.step++;
-        } else {
-          this.invalid = true;
-        }
-      } else {
-        this.step++;
+      ApplicationSettings.setString("store", JSON.stringify(this.$store.state));
+      console.log("store set");
+
+      if (this.pushNotifications) {
+        this.createNotifications();
       }
-    },
-    onItemTap(event) {
-      if (event.item.numbers) {
-        this.selectedStreet = event.item;
-        this.tapContinue();
-      } else {
-        this.step = 4;
-      }
+
+      this.$navigateTo(App, {
+        clearHistory: true
+      });
     }
   }
-}
+};
 </script>
 
 <style>
-
 </style>
