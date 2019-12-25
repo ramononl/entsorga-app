@@ -5,16 +5,16 @@
       <!-- <Button @tap="onTapHasPermission" class="btn" text="Has Permission?"></Button>
       <Button @tap="createNotifications" class="btn" text="Schedule Notification"></Button>
       <Button @tap="cancelAllNotifications" class="btn" text="Cancel notifications"></Button> -->
-      <FlexboxLayout justifyContent="space-between" alignItems="center" flexWrap="wrap" class="action-item action-item-first rounded-sm">
-        <Label text="Adresse" class="text-primary font-bold" flexGrow="0"/>
-        <Label :text="userAddress" class="text-secondary"/>
+      <FlexboxLayout justifyContent="space-between" alignItems="center" flexWrap="wrap" class="p-x-20 p-y-10">
+        <Label text="Adresse" class="text-pink-100 font-bold" flexGrow="0"/>
+        <Label :text="userAddress" class="text-pink-100"/>
       </FlexboxLayout>
       <FlexboxLayout justifyContent="space-between" alignItems="center" :class="[showAllPaper ? 'rounded-t-sm' : 'rounded-sm']" class="action-item action-item-first" @tap="showAllPaper = !showAllPaper">
         <Label text="Papier" class="text-primary font-bold" flexGrow="0"/>
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label class="text-secondary text-right" :text="days[nextPaper.weekday] + ' ' +  nextPaper.day + '. ' + months[nextPaper.month] + ' ' + nextPaper.year" />
           <StackLayout>
-            <Image :class="[showAllPaper ? 'rotate-90' : 'rotate-0']" src="res://appicons/icon-cheveron" stretch="none" class="cheveron"/>
+            <Image :class="[showAllPaper ? 'rotate-90' : 'rotate-0']" src="res://icon-cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
@@ -26,7 +26,7 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label class="text-secondary text-right" :text="days[nextCarton.weekday] + ' ' +  nextCarton.day + '. ' + months[nextCarton.month] + ' ' + nextCarton.year" />
           <StackLayout>
-            <Image :class="[showAllCarton ? 'rotate-90' : 'rotate-0']" src="res://appicons/icon-cheveron" stretch="none" class="cheveron"/>
+            <Image :class="[showAllCarton ? 'rotate-90' : 'rotate-0']" src="res://icon-cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
@@ -62,8 +62,19 @@ export default {
     userAddress() {
       let streetName = this.$store.state.user.streetName;
       let streetNumber = this.$store.state.user.streetNumber;
-      let tour = this.tour;
-      return `${streetName} ${streetNumber} (Tour ${tour})`;
+      let tour;
+      if (this.tour === "tour1") {
+        tour = 1;
+      } else if (this.tour === "tour2") {
+        tour = 2;
+      } else {
+        tour = 3;
+      }
+      if (streetNumber !== "") {
+        return `${streetName} ${streetNumber} (Tour ${tour})`;
+      } else {
+        return `${streetName} (Tour ${tour})`;
+      }
     },
     paperDates() {
       let tour = this.tour;
