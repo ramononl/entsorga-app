@@ -19,31 +19,12 @@
 </template>
 
 <script>
-import ranges from "~/assets/ranges.json";
 import StreetNumberSelect from "./StreetNumberSelect";
 import { pushHandling } from '../../mixins/pushHandling';
+import { filterStreetNames } from '../../mixins/filterStreetNames';
 
 export default {
-  data() {
-    return {
-      searchBar: '',
-      streetNames: ranges.data
-    }
-  },
-  mixins: [pushHandling],
-  computed: {
-    filteredNames() {
-      let term = this.searchBar.toLowerCase();
-      if (term !== '') {
-        let filteredNames = this.streetNames.filter(function(value) {
-          let name = value.name.toLowerCase();
-          if (name.indexOf(term) > -1) return value;
-        });
-        return filteredNames;
-      }
-      return this.streetNames;
-    }
-  },
+  mixins: [pushHandling, filterStreetNames],
   methods: {
     onItemTap(event) {
       if (event.item.numbers) {

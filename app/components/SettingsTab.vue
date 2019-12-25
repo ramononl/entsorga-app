@@ -7,7 +7,7 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label :text="userStreetName + ' ' + userStreetNumber" class="text-secondary text-right"/>
           <StackLayout>
-            <Image src="res://appicons/icon-cheveron" stretch="none" class="cheveron"/>
+            <Image src="res://icon-cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
@@ -32,12 +32,14 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label :text="pushDayList[pushDay] + ' um ' + pushTime + ' Uhr'" class="text-secondary text-right"/>
           <StackLayout>
-            <Image src="res://appicons/icon-cheveron" stretch="none" class="cheveron"/>
+            <Image src="res://icon-cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
 
-      <Label text="App zurücksetzen" @tap="resetApp" class="text-pink-100 text-center m-t-20"/>
+      <FlexboxLayout justifyContent="center" class="m-t-20">
+        <Label text="App zurücksetzen" @tap="resetApp" class="text-pink-100"/>
+      </FlexboxLayout>
         
     </FlexboxLayout>
   </ScrollView>
@@ -47,6 +49,7 @@
 import StreetSelect from "./secondary/StreetSelect";
 import PushTimeSelect from "./secondary/PushTimeSelect";
 import { pushHandling } from '../mixins/pushHandling';
+import { resetSettings } from '../mixins/resetSettings';
 
 export default {
   data() {
@@ -57,8 +60,17 @@ export default {
       switchReady: false
     }
   },
-  mixins: [pushHandling],
+  mixins: [pushHandling, resetSettings],
   computed: {
+    userAddress() {
+      let streetName = this.$store.state.user.streetName;
+      let streetNumber = this.$store.state.user.streetNumber;
+      if (streetNumber !== "") {
+        return `${streetName} ${streetNumber}`;
+      } else {
+        return streetName;
+      }
+    },
     userStreetName() {
       return this.$store.state.user.streetName;
     },
@@ -109,12 +121,6 @@ export default {
         }
         this.createNotifications();
       }
-    },
-    resetApp() {
-      this.$store.commit('setSetupDone', false);
-      // remove all notifications
-      // clear store
-      // clear application settings
     }
   }
 }

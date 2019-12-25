@@ -17,14 +17,11 @@ export const pushHandling = {
     });
   },
   methods: {
-    onTapHasPermission() {
-      LocalNotifications.hasPermission().then(granted => {
-        alert({
-          title: "Permission granted?",
-          message: granted ? "YES" : "NO",
-          okButtonText: "OK"
+    permissionGranted() {
+      LocalNotifications.hasPermission().then(
+        function(granted) {
+          console.log("Permission granted? " + granted);
         });
-      });
     },
     createNotifications() {
       let days = ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."];
@@ -134,11 +131,7 @@ export const pushHandling = {
           if (notificationArr && notificationArr.length) {
             LocalNotifications.schedule(notificationArr)
               .then(() => {
-                alert({
-                  title: "Notification scheduled",
-                  message: "ID: 1",
-                  okButtonText: "OK, thanks"
-                });
+                console.log(notificationArr.length + " notifications created");
               })
               .catch(error => console.log("doSchedule error: " + error));
             // console.log("created notifications");
@@ -151,9 +144,16 @@ export const pushHandling = {
     cancelAllNotifications() {
       LocalNotifications.cancelAll()
         .then(() => {
-          console.log("all canceled");
+          console.log("all notifications canceled");
         })
         .catch(error => console.log("doCancelAll error: " + error));
+    },
+    requestNotificationPermission() {
+      LocalNotifications.requestPermission().then(
+        function(granted) {
+          console.log("Permission granted? " + granted);
+        }
+      )
     }
   }
 };
