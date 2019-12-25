@@ -4,8 +4,8 @@ import * as ApplicationSettings from "application-settings";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
+const getDefaultState = () => {
+  return {
     setupDone: false,
     user: {
       streetName: null,
@@ -30,48 +30,58 @@ export default new Vuex.Store({
       "6 Tage vorher",
       "7 Tage vorher"
     ]
-  },
-  mutations: {
-    load(state) {
-      if (ApplicationSettings.getString("store")) {
-        this.replaceState(
-          Object.assign(
-            state,
-            JSON.parse(ApplicationSettings.getString("store"))
-          )
-        );
-      }
-    },
-    setSetupDone(state, name) {
-      state.setupDone = name;
-    },
-    setStreetName(state, name) {
-      state.user.streetName = name;
-    },
-    setStreetNumber(state, name) {
-      state.user.streetNumber = name;
-    },
-    setTour(state, name) {
-      state.user.tour = name;
-    },
-    setPushNotifications(state, name) {
-      state.user.pushNotifications = name;
-    },
-    setPushPaper(state, name) {
-      state.user.pushPaper = name;
-    },
-    setPushCarton(state, name) {
-      state.user.pushCarton = name;
-    },
-    setPushDay(state, name) {
-      state.user.pushDay = name;
-    },
-    setPushHour(state, name) {
-      state.user.pushTime.hour = name;
-    },
-    setPushMinute(state, name) {
-      state.user.pushTime.minute = name;
+  };
+};
+
+// initial state
+const state = getDefaultState();
+
+const mutations = {
+  load(state) {
+    if (ApplicationSettings.getString("store")) {
+      this.replaceState(
+        Object.assign(state, JSON.parse(ApplicationSettings.getString("store")))
+      );
     }
   },
-  actions: {}
+  resetState(state) {
+    Object.assign(state, getDefaultState());
+  },
+  setSetupDone(state, name) {
+    state.setupDone = name;
+  },
+  setStreetName(state, name) {
+    state.user.streetName = name;
+  },
+  setStreetNumber(state, name) {
+    state.user.streetNumber = name;
+  },
+  setTour(state, name) {
+    state.user.tour = name;
+  },
+  setPushNotifications(state, name) {
+    state.user.pushNotifications = name;
+  },
+  setPushPaper(state, name) {
+    state.user.pushPaper = name;
+  },
+  setPushCarton(state, name) {
+    state.user.pushCarton = name;
+  },
+  setPushDay(state, name) {
+    state.user.pushDay = name;
+  },
+  setPushHour(state, name) {
+    state.user.pushTime.hour = name;
+  },
+  setPushMinute(state, name) {
+    state.user.pushTime.minute = name;
+  }
+};
+
+export default new Vuex.Store({
+  state,
+  getters: {},
+  actions: {},
+  mutations
 });
