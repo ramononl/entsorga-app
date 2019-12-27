@@ -5,8 +5,8 @@
     </ActionBar>
     <StackLayout class="page-bg-secondary">
       <SearchBar v-model="searchBar" hint="Strasse suchen..."/>
-      <StackLayout>
-        <ListView for="streetName in filteredNames" @itemTap="onItemTap">
+      <StackLayout class="h-full">
+        <ListView for="streetName in filteredNames" @itemTap="onItemTap" class="h-full">
           <v-template>
             <GridLayout height="45">
               <Label :text="streetName.name" class="p-20"/>
