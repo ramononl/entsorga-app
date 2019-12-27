@@ -1,5 +1,5 @@
 <template>
-  <StackLayout class="h-full">
+  <StackLayout class="h-full p-x-20">
     <Label textWrap="true" text="Möchten Sie Benachrichtigungen erhalten?" class="h1 p-x-20" />
     <StackLayout class="m-t-20 bg-white-transparent rounded-sm">
       <FlexboxLayout justifyContent="space-between" alignItems="center" class="p-l-20 p-r-5 p-y-5">
@@ -7,7 +7,7 @@
         <Switch class="switch" v-model="allPush"/>
       </FlexboxLayout>
     </StackLayout>
-    <Label v-if="allPush" text="Erlauben Sie bitte die Zustellung von Mitteilungen, wenn Sie dazu aufgefordert werden." textWrap="true" class="text-pink-100 p-x-0 m-x-0 m-t-10 text-sm"/>
+    <Label v-if="allPush" text="Erlauben Sie bitte hierzu die Zustellung von Mitteilungen, wenn Sie dazu aufgefordert werden." textWrap="true" class="text-pink-100 p-x-0 m-x-0 m-t-10 text-sm"/>
     <StackLayout v-if="allPush" class="m-t-20 bg-white-transparent rounded-sm">
       <FlexboxLayout justifyContent="space-between" alignItems="center" class="p-l-20 p-r-5 p-y-5">
         <Label text="Mitteilungen für Papier" class="text-primary font-bold"/>
@@ -19,8 +19,8 @@
       </FlexboxLayout>
     </StackLayout>
     <FlexboxLayout justifyContent="space-between" class="w-full">
-      <Button text="Zurück" @tap="goBack" class="m-t-20 m-x-0 p-x-20"/>
-      <Button text="Weiter" @tap="nextStep" class="m-t-20 m-x-0 p-x-20"/>
+      <Button text="Zurück" @tap="goBack" class="m-t-20 m-x-0 p-x-20 action-button"/>
+      <Button text="Weiter" @tap="nextStep" class="m-t-20 m-x-0 p-x-20 action-button"/>
     </FlexboxLayout>
   </StackLayout>
 </template>
@@ -41,7 +41,11 @@ export default {
   mixins: [pushHandling],
   methods: {
     nextStep() {
-      this.$emit("storepush", this.allPush);
+      if (this.allPush && !this.paper && !this.carton) {
+        this.$emit("storepush", false);
+      } else {
+        this.$emit("storepush", this.allPush);
+      }
       this.$emit("storepaper", this.paper);
       this.$emit("storecarton", this.carton);
       if (this.allPush) {

@@ -1,5 +1,5 @@
 <template>
-  <StackLayout class="h-full">
+  <StackLayout class="h-full p-x-20">
     <Label textWrap="true" text="Wie lautet Ihre Hausnummer?" class="h1 p-x-20" />
     <StackLayout class="w-full m-t-20 bg-white-transparent rounded-sm">
       <Label :text="streetName.name" class="p-x-20 p-y-10 text-sm text-gray-800 font-bold border-b border-gray-800" />
@@ -21,8 +21,8 @@
       class="text-pink-100 p-x-0 m-x-0 m-t-10 text-sm"
     />
     <FlexboxLayout justifyContent="space-between" class="w-full">
-      <Button text="Zurück" @tap="goBack" class="m-t-20 m-x-0 p-x-20"/>
-      <Button text="Weiter" @tap="nextStep" class="m-t-20 m-x-0 p-x-20"/>
+      <Button text="Zurück" @tap="goBack" class="m-t-20 m-x-0 p-x-20 action-button"/>
+      <Button text="Weiter" @tap="nextStep" class="m-t-20 m-x-0 p-x-20 action-button"/>
     </FlexboxLayout>
   </StackLayout>
 </template>
@@ -42,7 +42,7 @@ export default {
       let numberOfDivisions = numbers.length;
 
       // only if valid
-      if (this.streetNumber <= numbers[numberOfDivisions - 1].nrBis) {
+      if (this.streetNumber <= numbers[numberOfDivisions - 1].nrBis && this.streetNumber !=="") {
         this.invalid = false;
 
         let tour;
