@@ -2,7 +2,7 @@
   <Page class="page-bg" actionBarHidden="true">
     <DockLayout stretchLastChild="true">
       <LogoBar />
-      <StackLayout class="p-20">
+      <StackLayout class="p-y-20">
         <AppInfo @nextstep="nextStep" v-if="step === 'AppInfo'" />
         <SetupStreetSelect
           @nextstep="nextStep"
@@ -34,6 +34,7 @@
           @pushday="storeDay"
           @pushhour="storeHour"
           @pushminute="storeMinute"
+          @nextstep="nextStep"
           @setstore="setStore"
           v-if="step === 'SetupPushTimeSelect'"
         />
