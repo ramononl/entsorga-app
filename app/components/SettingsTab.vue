@@ -7,7 +7,7 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label :text="userStreetName + ' ' + userStreetNumber" class="text-secondary text-right"/>
           <StackLayout>
-            <Image src="res://icon-cheveron" stretch="none" class="cheveron"/>
+            <Image src="res://cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
@@ -32,13 +32,13 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label :text="pushDayList[pushDay] + ' um ' + pushTime + ' Uhr'" class="text-secondary text-right"/>
           <StackLayout>
-            <Image src="res://icon-cheveron" stretch="none" class="cheveron"/>
+            <Image src="res://cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
 
-      <FlexboxLayout justifyContent="center" class="m-t-20">
-        <Label text="App zurücksetzen" @tap="resetApp" class="text-pink-100"/>
+      <FlexboxLayout justifyContent="center" class="m-t-20 w-full">
+        <Label text="App zurücksetzen" @tap="resetApp" class="text-pink-100 p-0 m-0"/>
       </FlexboxLayout>
         
     </FlexboxLayout>

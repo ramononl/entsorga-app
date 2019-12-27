@@ -14,11 +14,11 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label class="text-secondary text-right" :text="days[nextPaper.weekday] + ' ' +  nextPaper.day + '. ' + months[nextPaper.month] + ' ' + nextPaper.year" />
           <StackLayout>
-            <Image :class="[showAllPaper ? 'rotate-90' : 'rotate-0']" src="res://icon-cheveron" stretch="none" class="cheveron"/>
+            <Image :class="[showAllPaper ? 'rotate-90' : 'rotate-0']" src="res://cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
-      <StackLayout v-if="showAllPaper" class="all-dates border-gray-800 border-t rounded-b-sm">
+      <StackLayout v-if="showAllPaper" class="bg-white-transparent p-x-20 p-y-10 border-gray-800 border-t rounded-b-sm">
         <Label class="p-y-10 text-secondary" v-for="(date, index) in futurePaper" :key="index" :text="daysFull[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
       <FlexboxLayout justifyContent="space-between" alignItems="center" :class="[showAllCarton ? 'rounded-t-sm' : 'rounded-sm']" class="action-item action-item-first" @tap="showAllCarton = !showAllCarton">
@@ -26,11 +26,11 @@
         <FlexboxLayout justifyContent="flex-end" alignItems="center" flexGrow="1">
           <Label class="text-secondary text-right" :text="days[nextCarton.weekday] + ' ' +  nextCarton.day + '. ' + months[nextCarton.month] + ' ' + nextCarton.year" />
           <StackLayout>
-            <Image :class="[showAllCarton ? 'rotate-90' : 'rotate-0']" src="res://icon-cheveron" stretch="none" class="cheveron"/>
+            <Image :class="[showAllCarton ? 'rotate-90' : 'rotate-0']" src="res://cheveron" stretch="none" class="cheveron"/>
           </StackLayout>
         </FlexboxLayout>
       </FlexboxLayout>
-      <StackLayout v-if="showAllCarton" class="all-dates border-gray-800 border-t rounded-b-sm">
+      <StackLayout v-if="showAllCarton" class="bg-white-transparent p-x-20 p-y-10 border-gray-800 border-t rounded-b-sm">
         <Label class="p-y-10 text-secondary" v-for="(date, index) in futureCarton" :key="index" :text="daysFull[date.weekday] + ', ' +  date.day + '. ' + months[date.month] + ' ' + date.year" />
       </StackLayout>
     </FlexboxLayout>
