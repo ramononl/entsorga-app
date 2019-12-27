@@ -5,4 +5,5 @@ const routes = {
   setup: Setup,
   app: App
 };
+
 export default routes;

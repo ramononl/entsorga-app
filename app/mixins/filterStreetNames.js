@@ -1,3 +1,5 @@
+// filter street names (used in setup and settings)
+
 import ranges from "~/assets/ranges.json";
 
 export const filterStreetNames = {

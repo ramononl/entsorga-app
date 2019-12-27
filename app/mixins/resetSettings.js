@@ -1,3 +1,5 @@
+// reset settings (used settings)
+
 import * as ApplicationSettings from "application-settings";
 import Setup from "../components/Setup";
 import { pushHandling } from "../mixins/pushHandling";

@@ -4,6 +4,7 @@ import * as ApplicationSettings from "application-settings";
 
 Vue.use(Vuex);
 
+// default state for new installations and reset
 const getDefaultState = () => {
   return {
     setupDone: false,
@@ -33,10 +34,12 @@ const getDefaultState = () => {
   };
 };
 
-// initial state
+// set initial state
 const state = getDefaultState();
 
+// define mutations
 const mutations = {
+  // load from local settings if present
   load(state) {
     if (ApplicationSettings.getString("store")) {
       this.replaceState(
@@ -44,9 +47,11 @@ const mutations = {
       );
     }
   },
+  // reset state to default state
   resetState(state) {
     Object.assign(state, getDefaultState());
   },
+  // in-app state mutations
   setSetupDone(state, name) {
     state.setupDone = name;
   },
@@ -79,6 +84,7 @@ const mutations = {
   }
 };
 
+// create vuex store
 export default new Vuex.Store({
   state,
   getters: {},

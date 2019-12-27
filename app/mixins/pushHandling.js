@@ -1,5 +1,5 @@
-import { alert } from "tns-core-modules/ui/dialogs";
-import { Color } from "tns-core-modules/color";
+// create/destroy push notifications based on store (used in setup and settings)
+
 import { LocalNotifications } from "nativescript-local-notifications";
 
 import dates from "~/assets/dates.json";
