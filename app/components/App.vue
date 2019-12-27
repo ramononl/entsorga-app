@@ -20,10 +20,10 @@
           <Label text="Einstellungen"/>
         </FlexboxLayout>
       </GridLayout>
-      <HomeTab v-if="index === 0 && setupDone"/>
-      <PlacesTab v-if="index === 1 && setupDone"/>
-      <InfosTab v-if="index === 2 && setupDone"/>
-      <SettingsTab v-if="index === 3 && setupDone"/>
+      <HomeTab v-if="setupDone" v-show="index === 0"/>
+      <PlacesTab v-if="setupDone" v-show="index === 1"/>
+      <InfosTab v-if="setupDone" v-show="index === 2"/>
+      <SettingsTab v-if="setupDone" v-show="index === 3"/>
     </DockLayout>
   </Page>
 </template>
