@@ -1,20 +1,13 @@
-// NativeScript core theme
-// @see https://docs.nativescript.org/ui/theme
-
+// Sass variables
 @import './variables.scss';
+
+// NativeScript core theme
 @import "~@nativescript/theme/index";
 
 
-// @import '~@nativescript/theme/core';
-// @import '~@nativescript/theme/default';
+// -------------- Global styling --------------
 
-// Global SCSS styling
-// @see https://docs.nativescript.org/ui/styling
-
-Label, SearchBar {
-  font-size: 16;
-}
-
+// ------ Font Size ------
 .text-sm {
   font-size: 14;
 }
@@ -27,6 +20,13 @@ Label, SearchBar {
   font-size: 20;
 }
 
+// ------ Font Weight ------
+.font-bold {
+  font-weight: 700;
+}
+
+
+// ------ Text Color ------
 .text-primary {
   color: $primary;
 }
@@ -35,21 +35,33 @@ Label, SearchBar {
   color: $secondary;
 }
 
+.text-pink-100 {
+  color: $pink-100;
+}
+
 .text-gray-600 {
   color: $gray-600;
 }
 
-.font-bold {
-  font-weight: bold;
+.text-gray-100 {
+  color: $gray-100;
 }
 
-.text-danger {
+.text-red-600 {
   color: $red-600;
-  font-weight: 700;
+}
+
+// ------ Background Color ------
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-white {
   background-color: $white;
+}
+
+.bg-white-transparent {
+  background-color: rgba(255,255,255,0.75);
 }
 
 .bg-gray-100 {
@@ -60,24 +72,35 @@ Label, SearchBar {
   background-color: $gray-200;
 }
 
-.border-gray-800 {
-  border-color: $gray-800;
-}
-
-.bg-white-transparent {
-  background-color: rgba(255,255,255,0.75);
-}
+// ------ Border Color ------
 
 .border-white-transparent {
   border-color: rgba(255,255,255,0.2);
 }
 
+.border-white-transparent-50 {
+  border-color: rgba(255,255,255,0.5);
+}
+
+.border-gray-800 {
+  border-color: $gray-800;
+}
+
+.border-pink-100 {
+  border-color: $pink-100;
+}
+
+// ------ Border Width ------
 .border-0 {
   border-width: 0;
 }
 
 .border {
   border-width: 1;
+}
+
+.border-2 {
+  border-width: 2;
 }
 
 .border-t {
@@ -96,43 +119,9 @@ Label, SearchBar {
   border-left-width: 1;
 }
 
-.page-bg {
-  background: linear-gradient(-22deg, #4a06a5, #cc1cab);
-}
-
-.text-pink-100 {
-  color: $pink-100;
-}
-
-.section-description {
-  text-transform: uppercase;
-  color: $pink-100;
-  font-weight: 700;
-  font-size: 12;
-  margin: 30 20 0 20;
-}
-
-.page-bg-secondary {
-  background-color: $gray-200;
-  .section-description {
-    color: $gray-600;
-  }
-}
-
-.text-20 {
-  font-size: 20;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.page-padding {
-  padding: 20;
+// ------ Border Radius ------
+.rounded-none {
+  border-radius: 0;
 }
 
 .rounded-sm {
@@ -144,21 +133,71 @@ Label, SearchBar {
   border-top-left-radius: 6;
 }
 
+.rounded-r-sm {
+  border-top-right-radius: 6;
+  border-bottom-right-radius: 6;
+}
+
 .rounded-b-sm {
   border-bottom-right-radius: 6;
   border-bottom-left-radius: 6;
 }
 
-TabView {
-  // padding: 10 0;
-  tab-text-color: $gray-400;
-  selected-tab-text-color: $gray-200;
-  tab-background-color: #222222;
+.rounded-l-sm {
+  border-top-left-radius: 6;
+  border-bottom-left-radius: 6;
 }
 
-Button {
+.rounded-full {
+  border-radius: 9999px;
+}
+
+// ------ Width ------
+.w-full {
+  width: 100%;
+}
+
+// ------ Height ------
+.h-full {
+  height: 100%;
+}
+
+// ------ Animations ------
+@keyframes rotate90 {
+  from { transform: none }
+  to { transform: rotate(90); }
+}
+.rotate-90 {
+  animation-name: rotate90;
+  animation-duration: 0.17s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate0 {
+  from { transform: rotate(90) }
+  to { transform: none; }
+}
+.rotate-0 {
+  animation-name: rotate0;
+  animation-duration: 0.17s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+// ------ NativeScript Custom Elements ------
+Label, SearchBar {
+  font-size: 16;
+}
+
+Switch.switch {
+  background-color: #34C759; // iOS System color green
+  off-background-color: $gray-500;
+}
+
+SegmentedBar {
   background-color: $gray-800;
-  color: $gray-100;
+  selected-background-color: $gray-600;
 }
 
 .tab-navigation {
@@ -188,6 +227,38 @@ Button {
   }
 }
 
+// ------ Custom Class Components ------
+.page-bg {
+  background: linear-gradient(-22deg, #4a06a5, #cc1cab);
+}
+
+.page-padding {
+  padding: 20;
+}
+
+.section-description {
+  text-transform: uppercase;
+  color: $pink-100;
+  font-weight: 700;
+  font-size: 12;
+  margin: 30 20 0 20;
+}
+
+.page-bg-secondary {
+  background-color: $gray-200;
+  .section-description {
+    color: $gray-600;
+  }
+}
+
+.action-button {
+  background-color: $gray-800;
+  font-size: 16;
+  color: $gray-100;
+  border-radius: 9999;
+  font-weight: 700;
+}
+
 .action-item {
   min-height: 45;
   padding: 10 20;
@@ -207,31 +278,6 @@ Button {
   margin-left: 5;
 }
 
-Switch.switch {
-  background-color: #34C759; // iOS System color green
-  off-background-color: $gray-500;
-}
-
-.all-dates {
-  background-color: rgba(255,255,255,0.75);
-  padding: 10 20;
-}
-
-.bg-gray-100 {
-  background-color: #f7fafc;
-}
-
-.bg-gray-200 {
-  background-color: #edf2f7;
-}
-
-.message {
-  vertical-align: center;
-  text-align: center;
-  font-size: 20;
-  color: #333333;
-}
-
 .h1 {
   font-weight: 700;
   color: $pink-100;
@@ -244,24 +290,4 @@ Switch.switch {
   font-size: 32;
 }
 
-@keyframes rotate90 {
-  from { transform: none }
-  to { transform: rotate(90); }
-}
-.rotate-90 {
-  animation-name: rotate90;
-  animation-duration: 0.17s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
 
-@keyframes rotate0 {
-  from { transform: rotate(90) }
-  to { transform: none; }
-}
-.rotate-0 {
-  animation-name: rotate0;
-  animation-duration: 0.17s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
