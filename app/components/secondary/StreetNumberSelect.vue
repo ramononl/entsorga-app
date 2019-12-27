@@ -13,7 +13,7 @@
     <StackLayout class="page-bg-secondary">
       <Label :text="streetName.name" class="text-center text-lg m-t-30 text-gray-600" />
       <TextField
-        class="bg-white border-gray-800 border rounded-sm m-x-20 m-y-10 p-x-20 p-y-30 text-center text-20"
+        class="bg-white border-gray-800 border rounded-sm m-x-20 m-y-10 p-x-20 p-y-30 text-center text-lg"
         v-model="streetNumber"
         @loaded="showKeyboard"
         hint="Hausnummer"
@@ -26,7 +26,7 @@
         v-if="invalid"
         text="Bitte geben Sie eine gültige Hausnummer ein."
         textWrap="true"
-        class="text-center text-danger p-x-20 m-t-30"
+        class="text-center text-red-600 font-bold p-x-20 m-t-30"
       />
     </StackLayout>
   </Page>
@@ -61,7 +61,7 @@ export default {
       let numberOfDivisions = numbers.length;
 
       // only if valid
-      if (this.streetNumber <= numbers[numberOfDivisions - 1].nrBis) {
+      if (this.streetNumber <= numbers[numberOfDivisions - 1].nrBis && this.streetNumber !=="") {
         this.invalid = false;
 
         let tour;
