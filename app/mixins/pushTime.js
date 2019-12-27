@@ -1,3 +1,5 @@
+// get/set push day and time (used in setup and settings)
+
 export const pushTime = {
   data() {
     return {
@@ -6,19 +8,33 @@ export const pushTime = {
       newPushMinute: null
     }
   },
-  computed: {
-    pushDay() {
+  mounted() {
+    console.log(this.newPushDay);
+    if (!this.newPushDay && this.$store.state.user.pushDay) {
       this.newPushDay = this.$store.state.user.pushDay;
-      return this.$store.state.user.pushDay;
-    },
+    } else if (!this.newPushDay) {
+      this.newPushDay = 0;
+    }
+    console.log(this.newPushDay);
+  },
+  computed: {
     pushTime: {
       get() {
-        this.newPushHour = this.$store.state.user.pushTime.hour;
-        this.newPushMinute = this.$store.state.user.pushTime.minute;
-        let d = new Date();
-        d.setHours(this.$store.state.user.pushTime.hour);
-        d.setMinutes(this.$store.state.user.pushTime.minute);
-        return d;
+        if (!this.newPushHour && !this.newPushMinute && this.$store.state.user.pushTime.hour && this.$store.state.user.pushTime.minute) {
+          this.newPushHour = this.$store.state.user.pushTime.hour;
+          this.newPushMinute = this.$store.state.user.pushTime.minute;
+          let d = new Date();
+          d.setHours(this.newPushHour);
+          d.setMinutes(this.newPushMinute);
+          return d;
+        } else if (!this.newPushHour && !this.newPushMinute) {
+          this.newPushHour = 7;
+          this.newPushMinute = 30;
+          let d = new Date();
+          d.setHours(this.newPushHour);
+          d.setMinutes(this.newPushMinute);
+          return d;
+        }
       },
       set(value) {
         this.newPushHour = value.getHours();
