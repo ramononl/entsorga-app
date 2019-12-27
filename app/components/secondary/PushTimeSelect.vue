@@ -7,7 +7,7 @@
     </ActionBar>
     <StackLayout class="page-bg-secondary">
       <Label text="Tag der Benachrichtigung" class="section-description"/>
-      <ListPicker :items="listOfPushDays" :selectedIndex="pushDay" @selectedIndexChange="selectedIndexChanged($event.value)" class="text-primary action-item action-item-first"/>
+      <ListPicker :items="listOfPushDays" :selectedIndex="newPushDay" @selectedIndexChange="selectedIndexChanged($event.value)" class="text-primary action-item action-item-first"/>
       <Label text="Uhrzeit der Benachrichtigung" class="section-description"/>
       <TimePicker v-model="pushTime" minuteInterval="5" class="text-primary action-item action-item-first"/>
     </StackLayout>
