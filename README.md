@@ -12,7 +12,7 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 
 ![Header](https://entsorga.ramon.onl/assets/github/header.png)
 
-## Inhaltsverzeichnis
+## 📖 Inhaltsverzeichnis
 
 - [Funktionen](#funktionen)
 - [Ressourcen](#ressourcen)
@@ -29,7 +29,7 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 - [Bugs](#bugs)
 - [Verbesserungspotenzial](#verbesserungspotenzial)
 
-## Funktionen
+## ⭐️ Funktionen
 
 - Startscreen mit Informationen zur App
 - Setup-Prozess für erste Einrichtung
@@ -45,7 +45,7 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 - Einstellungen jederzeit änderbar
 - «App zurücksetzen»
 
-## Ressourcen
+## 🧩 Ressourcen
 
 | Name                             | Beschreibung                            | Typ           |
 | :------------------------------- | :-------------------------------------- | :------------ |
@@ -63,7 +63,7 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 | SF Symbols                       | Apple Icon Set (San Francisco Pro Text) | Icons         |
 | Charco                           | Charcoal-Style Illustrationen           | Illustrations |
 
-## Installation
+## 💻 Installation
 
 Die Einrichtung der Entwicklungsumgebung für die lokale Entwicklung mit NativeScript ist nicht ganz ohne und kann relativ viel Zeit in Anspruch nehmen.
 
@@ -124,7 +124,7 @@ tns run ios --device "iPhone 8"
 rm -rf platforms
 ```
 
-## Aufbau
+## 🏡 Aufbau
 
 Bei NativeScript handelt es sich um ein Open Source Framework, welches die Erstellung von JavaScript-Native-Apps ermöglicht. Daraus resultieren bestimmte Vorteile gegenüber hybriden Apps (Preformance, native APIs) und Native-Apps (nur eine Codebase). NativeScript kann mit Vanilla JavaScript/TypScript, Angular, Vue.js und bald auch React verwendet werden.
 
@@ -309,19 +309,19 @@ Import von `variables.scss` und Core Theme, globales Styling mit Utility-First A
 
 Schriftfamilie für App Icon/Logo Bar, Quelle: [Google Fonts](https://fonts.google.com/specimen/Rancho)
 
-## Simulator/Local Release Build
+## 📱 Simulator/Local Release Build
 
 Die Entwicklung der App mit dem Simulator kann einfach über die Kommandozeile mit den genannten Befehlen gestartet werden. Spätestens wenn die App auf ein angeschlossenes Gerät übertragen werden soll, sollte jedoch auf die Companion App «NativeScript Sidekick» zurückgegriffen werden. Das Programm macht die Erstellung eines Certificate Signing Requests, das Hinterlegen einer iOS Provision und des Zertifikat sehr viel einfacher.
 
 Es besteht auch eine Funktion zum automatischen, kostenlosen Generieren der benötigten Profile und Zertifikate. Zum Zeitpunkt der Entwicklung war diese Option jedoch fehlerhaft (Updates dazu auf [GitHub](https://github.com/NativeScript/sidekick-feedback/issues/435)). Aus diesem Grund muss zum Testen auf iOS-Geräten zwingend ein Apple Developer Account erstellt werden. Im Developer Account sind ein Identifier (ch.mma.entsorga), die verwendeten Geräte (mit UDID) und ein Profil für iOS Development hinterlegt. Die entsprechenden Zertifikate müssen auf dem lokalen Computer, welcher für die Entwicklung verwendet wird, hinterlegt werden.
 
-## Bugs
+## 🐞 Bugs
 
 ### Notification Image
 
 In der aktuellen Version des Plugin `nativescript-local-notifications` wird eine veraltete native iOS-Funktion verwendet, um Bilder zu Push-Benachrichtigung hinzuzufügen. Je nach Gerät und Version wird bei Mitteilungen deshalb teilweise kein Bild dargestellt. Da es sich dabei nur um eine symbolische Zusatzinformation handelt und sich alle Informationen bereits im Mitteilungs-Text befinden, ist dies nicht weiter tragisch. Das Bild würde bei der Mitteilung als kleines Thumbnail und beim längeren Drücken grösser dargestellt werden. Mit einem Update des Plugins wird dieses Problem hoffentlich bald gelöst.
 
-## Verbesserungspotenzial
+## 📬 Verbesserungspotenzial
 
 ### Handling von Daten
 
