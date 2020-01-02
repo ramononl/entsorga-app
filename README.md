@@ -4,9 +4,13 @@
 
 entsorga App
 ======================
-![Total Downloads](https://img.shields.io/badge/major-media%20applications-blue)
+![Major](https://img.shields.io/badge/major-media%20applications-blue)
+![Version](https://img.shields.io/badge/version-beta-orange)
+![Plattform](https://img.shields.io/badge/platform-ios%2Fandroid-green)
 
 Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfache und ökologische Entsorgen in Chur.
+
+![Header](https://entsorga.ramon.onl/assets/github/header.png)
 
 ## Inhaltsverzeichnis
 
@@ -21,7 +25,7 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
   - [Mixins](#mixins)
   - [Daten](#daten)
   - [Styling](#styling)
-- [Simulator/Local Release Build](#simulator-local-release-build)
+- [Simulator/Local Release Build](#simulatorlocal-release-build)
 - [Bugs](#bugs)
 - [Verbesserungspotenzial](#verbesserungspotenzial)
 
@@ -287,6 +291,8 @@ Beinhaltet Daten der Strassen mit Zuweisung der Touren, folgende Strassen sind i
 
 ### Styling
 
+![Farben](https://entsorga.ramon.onl/assets/github/colors.png)
+
 NativeScript Applikation können, ähnlich wie Websites, mit CSS gestaltet werden. Jedoch wird nur ein Subset von CSS untersützt. Auch Layouts sind ein Spezialfall, welche in NativeScript auf eine andere Art und Weise implementiert sind.
 
 #### variables.scss
@@ -298,6 +304,8 @@ In dieser Datei werden die Farben festgelegt, welche als Schrift- und Hintergrun
 Import von `variables.scss` und Core Theme, globales Styling mit Utility-First Ansatz (Naming-Convetion [Tailwind CSS](https://tailwindcss.com/), NativeScript Custom Elements und Custom Class Components für einzelne Anwendungen
 
 #### Rancho-Regular.ttf
+
+![Farben](https://entsorga.ramon.onl/assets/github/type.png)
 
 Schriftfamilie für App Icon/Logo Bar, Quelle: [Google Fonts](https://fonts.google.com/specimen/Rancho)
 
@@ -311,7 +319,7 @@ Es besteht auch eine Funktion zum automatischen, kostenlosen Generieren der ben�
 
 ### Notification Image
 
-In der aktuellen Version des Plugin `nativescript-local-notifications` wird eine veraltete Funktion verwendet, um Bilder zu Push-Benachrichtigung hinzuzufügen. Je nach Gerät und Version wird bei Mitteilungen deshalb teilweise kein Bild dargestellt. Da es sich dabei nur um eine symbolische Zusatzinformation handelt und sich alle Informationen bereits im Mitteilungs-Text befinden, ist dies nicht weiter tragisch. Das Bild würde bei der Mitteilung als kleines Thumbnail und beim längeren Drücken grösser dargestellt werden. Mit einem Update des Plugins wird dieses Problem hoffentlich bald gelöst.
+In der aktuellen Version des Plugin `nativescript-local-notifications` wird eine veraltete native iOS-Funktion verwendet, um Bilder zu Push-Benachrichtigung hinzuzufügen. Je nach Gerät und Version wird bei Mitteilungen deshalb teilweise kein Bild dargestellt. Da es sich dabei nur um eine symbolische Zusatzinformation handelt und sich alle Informationen bereits im Mitteilungs-Text befinden, ist dies nicht weiter tragisch. Das Bild würde bei der Mitteilung als kleines Thumbnail und beim längeren Drücken grösser dargestellt werden. Mit einem Update des Plugins wird dieses Problem hoffentlich bald gelöst.
 
 ## Verbesserungspotenzial
 
@@ -330,6 +338,10 @@ Für Papier- und Kartonsammlungen könnte die Auswahl von unterschiedlichen Zeit
 ### Technisches Handling von Push-Mitteilungen
 
 Die Push-Mitteilungen werden einfachheitshalber lokal erstellt. Alternative könnte dafür ein Third-Party Service konfiguriert werden (z.B. Firebase Cloud Messaging). Evtl. kommen damit aber auch andere Probleme auf, sodass User sich registrieren müssten. Dies kam bis anhin bewusst nicht in Frage.
+
+### Optimierung für Android
+
+Ein grosser Vorteil von NativeScript ist, dass Native Apps für iOS und Android aus einer Codebase erstellt werden können. Damit die entsorga App auch auf Android läuft, müssten jedoch trotzdem noch einige kleine Änderungen vorgenommen werden.
 
 ### Inhaltssuche
 
