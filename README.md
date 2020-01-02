@@ -8,7 +8,7 @@ entsorga App
 ![Version](https://img.shields.io/badge/version-beta-orange)
 ![Plattform](https://img.shields.io/badge/platform-ios%2Fandroid-green)
 
-Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfache und ökologische Entsorgen in Chur.
+Die entsorga App beinhaltet **Informationen**, **Tipps** und **Hinweise** rund um das einfache und ökologische **Entsorgen in Chur**.
 
 ![Header](https://entsorga.ramon.onl/assets/github/header.png)
 
@@ -170,14 +170,20 @@ Wie mit Vue.js üblich, bauen NativeScript-Vue Apps auf Komponenten auf. Neben d
 
 <details><summary><b>General</b></summary>
 
-#### App.vue
-`entsorga-app/app/components/App.vue`
-
 #### Setup.vue
 `entsorga-app/app/components/Setup.vue`
 
+Handling des 5-schrittigen Setup Prozesses, empfängt Eingaben durch Custom Events ($emit), gibt Props weiter, erstellt nach letztem Schritt Vuex Store, speichert alles in den lokalen Application Settings, erstellt die nötigen Push-Mitteilungen und navigiert anschliessend zu Startseite
+
+#### App.vue
+`entsorga-app/app/components/App.vue`
+
+Hauptlayout der App, Beinhaltet `LogoBar`, eine Custom Tab-Navigation mit GridLayout und Verweise zu den jeweiligen Inhaltskomponenten, welche basierend auf dem `index`-Wert angezeigt werden. Der `index`-Wert wird durch die `tabChange`-Methode geändert. Aufgabe des Codes in der `mounted`-Lifecycle-Hook ist es, Änderungen am Vuex Store in die lokalen Application Settings zu kopieren, damit sie beim nächsten Start der App nach wie vor vorhanden sind (Vuex Store wird nicht gespeichert).
+
 #### LogoBar.vue
 `entsorga-app/app/components/common/LogoBar.vue`
+
+Die LogoBar-Komponente besteht aus einem einfachen Template und wird in `Setup.vue` und `App.vue` eingebunden.
 
 </details>
 
@@ -186,14 +192,22 @@ Wie mit Vue.js üblich, bauen NativeScript-Vue Apps auf Komponenten auf. Neben d
 #### HomeTab.vue
 `entsorga-app/app/components/HomeTab.vue`
 
+ScrollView des Tabs **Startseite**, zeigt Adresse, Tour und nächste Sammeltermine von Papier und Karton an, bei Tap auf Papier/Karton werden vier weitere Termine angezeigt
+
 #### PlacesTab.vue
 `entsorga-app/app/components/PlacesTab.vue`
+
+GridLayout des Tabs **Standorte**, besteht aus einer SegmentedBar für die Auswahl einer Listen- oder Kartenansicht, die Daten werden aus dem File `places.json` geladen, die Implementierung der Karte ist mit dem nativescript-mapbox Plugin gelöst, obwohl es nicht für die Nutzung mit NativeScript-Vue optimiert ist, für die Abfrage des Nutzerstandorts wird beim ersten Start der App um Erlaubnis gebeten, die Map-Marker werden in der Computed Property `markers` generiert und in der Methode `onMapReady` der Karte hinzugefügt
 
 #### InfosTab.vue
 `entsorga-app/app/components/InfosTab.vue`
 
+ScrollView des Tabs **Infos**, einfache Auflistung der Inhalte von `infos.json` mit `v-for`-Directive
+
 #### SettingsTab.vue
 `entsorga-app/app/components/SettingsTab.vue`
+
+ScrollView des Tabs **Einstellungen**, ermöglicht das Aktivieren/Deaktivieren von Mitteilungen, Enthält weiterführende Links zum Anpassen der Adresse und des Zeitpunktes der Mitteilungen (Methoden `goToStreetSelect`und `showPushTimeSelect`), Reset-Funktion über importiertes Mixin `resetSettings`, Push-Benachrichtigungen werden bei Anpassungen direkt über Mixin `pushHandling` geändert (bzw. gelöscht und neu erstellt)
 
 </details>
 
@@ -319,7 +333,15 @@ Es besteht auch eine Funktion zum automatischen, kostenlosen Generieren der ben�
 
 ### Notification Image
 
+![Notification Image](https://entsorga.ramon.onl/assets/github/notifications.png)*Gewünschtes Ergebnis*
+
 In der aktuellen Version des Plugin `nativescript-local-notifications` wird eine veraltete native iOS-Funktion verwendet, um Bilder zu Push-Benachrichtigung hinzuzufügen. Je nach Gerät und Version wird bei Mitteilungen deshalb teilweise kein Bild dargestellt. Da es sich dabei nur um eine symbolische Zusatzinformation handelt und sich alle Informationen bereits im Mitteilungs-Text befinden, ist dies nicht weiter tragisch. Das Bild würde bei der Mitteilung als kleines Thumbnail und beim längeren Drücken grösser dargestellt werden. Mit einem Update des Plugins wird dieses Problem hoffentlich bald gelöst.
+
+### Validierung Hausnummer
+
+![Validierung Hausnummer](https://entsorga.ramon.onl/assets/github/validation.png)*Ungültige Eingabe*
+
+Bei der Validierung der Hausnummer ist die Applikation auf eine reine Zahl angewiesen, um den Nutzer korrekt einer Tour zuzuordnen. Möchte ein User eine Hausnummer eingeben, welche einen Buchstaben enthält (z.B. «11a»), wird er aufgefordert, eine gültige Hausnummer einzugeben. Der User wird indirekte dazu aufgefordert, nur eine Zahl einzugeben, indem die Nummer-Tastatur angezeigt wird. Über andere Eingabegeräte ist die Eingabe jedoch trotzdem möglich.
 
 ## 📬 Verbesserungspotenzial
 
