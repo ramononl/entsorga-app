@@ -14,22 +14,22 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 
 ## 📖 Inhaltsverzeichnis
 
-- [Funktionen](#funktionen)
-- [Ressourcen](#ressourcen)
-- [Installation](#installation)
+- [Funktionen](#-funktionen)
+- [Ressourcen](#-ressourcen)
+- [Installation](#-installation)
   - [NativeScript](#nativescript)
   - [Nutzung](#nutzung)
-- [Aufbau](#aufbau)
+- [Aufbau](#-aufbau)
   - [Grundlagen](#grundlagen)
   - [Komponenten](#komponenten)
   - [Mixins](#mixins)
   - [Daten](#daten)
   - [Styling](#styling)
-- [Simulator/Local Release Build](#simulatorlocal-release-build)
-- [Bugs](#bugs)
-- [Verbesserungspotenzial](#verbesserungspotenzial)
+- [Simulator/Local Release Build](#-simulatorlocal-release-build)
+- [Bugs](#-bugs)
+- [Verbesserungspotenzial](#-verbesserungspotenzial)
 
-## ⭐️ Funktionen
+## 🌟 Funktionen
 
 - Startscreen mit Informationen zur App
 - Setup-Prozess für erste Einrichtung
