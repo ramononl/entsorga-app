@@ -11,7 +11,7 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 ## Inhaltsverzeichnis
 
 - [Funktionen](#funktionen)
-- [Ressourcen](#ressourcemn)
+- [Ressourcen](#ressourcen)
 - [Installation](#installation)
   - [NativeScript](#nativescript)
   - [Nutzung](#nutzung)
@@ -21,7 +21,9 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
   - [Mixins](#mixins)
   - [Daten](#daten)
   - [Styling](#styling)
-- [Simulator/Build](#simulator-build)
+- [Simulator/Local Release Build](#simulator-local-release-build)
+- [Bugs](#bugs)
+- [Verbesserungspotenzial](#verbesserungspotenzial)
 
 ## Funktionen
 
@@ -41,8 +43,8 @@ Die entsorga App beinhaltet Informationen, Tipps und Hinweise rund um das einfac
 
 ## Ressourcen
 
-| Ressource                        | Beschreibung                            | Typ           |
-| -------------------------------- | --------------------------------------- | ------------- |
+| Name                             | Beschreibung                            | Typ           |
+| :------------------------------- | :-------------------------------------- | :------------ |
 | nativescript-vue                 | Native Apps mit Vue.js und NativeScript | Dependency    |
 | nativescript-carousel            | Karussell Komponente für NativeScript   | Plugin        |
 | nativescript-local-notifications | Lokale Hintergrund-Mitteilungen         | Plugin        |
@@ -65,9 +67,9 @@ Die Einrichtung der Entwicklungsumgebung für die lokale Entwicklung mit NativeS
 
 Um NativeScript zum Laufen zu bringen können folgende Anleitungen hilfreich sein:
 
-- https://nativescript-vue.org/en/docs/getting-started/installation/
-- macOS: https://docs.nativescript.org/start/ns-setup-os-x
-- NativeScript-Vue: https://www.nativescript.org/blog/setting-up-a-robust-nativescript-vue-development-environment
+- [Installation - NativeScriptVue](https://nativescript-vue.org/en/docs/getting-started/installation/)
+- [NativeScript Advanced Setup: macOS](https://docs.nativescript.org/start/ns-setup-os-x)
+- [Blog-Beitrag (teilweise veraltet)](https://www.nativescript.org/blog/setting-up-a-robust-nativescript-vue-development-environment)
 
 Die aktuellen Systemanforderungen für macOS (zwingend für iOS-Entwicklung) sehen folgendermassen aus:
 - macOS High Sierra or later
@@ -90,7 +92,7 @@ Bei der Installation sind bei uns verschiedenste Fehler aufgetreten, obwohl die 
 
 In folgendem kürzlich veröffentlichten Video wird das Setup auf macOS sehr gut erläutert und ist ein guter Startpunkt:
 
-- https://www.youtube.com/watch?v=AT2GEwdJD0k
+- [Smooth NativeScript Environment Setup on Mac, 25.12.2019](https://www.youtube.com/watch?v=AT2GEwdJD0k)
 
 Bis zum Schluss hat der Einsatz der Vue DevTools nicht funktioniert, bzw. zu Problemen geführt. Deshalb wurde nach langem Testen schlussendlich auf den Einsatz der Vue DevTools verzichtet, obwohl diese in der Entwicklung eine grosse Hilfe wären.
 
@@ -160,30 +162,175 @@ Icons und Bilder in sechs Grössen (hdpi, ldpi, mdpi, xhdpi, xxhdpi, xxxhdpi), d
 
 ### Komponenten
 
+Wie mit Vue.js üblich, bauen NativeScript-Vue Apps auf Komponenten auf. Neben den integrierten Modulen/Komponenten kann das Template und die Logik beliebig in Komponenten aufgeteilt werden. Die Kommunikation zwischen Komponenten ist identisch zu Vue.js im Web. Im entsorga App kommen zur Kommunikation Props, Custom Events ($emit) und Vuex zum Einsatz.
+
+<details><summary><b>General</b></summary>
+
+#### App.vue
+`entsorga-app/app/components/App.vue`
+
+#### Setup.vue
+`entsorga-app/app/components/Setup.vue`
+
+#### LogoBar.vue
+`entsorga-app/app/components/common/LogoBar.vue`
+
+</details>
+
+<details><summary><b>Tabs</b></summary>
+
+#### HomeTab.vue
+`entsorga-app/app/components/HomeTab.vue`
+
+#### PlacesTab.vue
+`entsorga-app/app/components/PlacesTab.vue`
+
+#### InfosTab.vue
+`entsorga-app/app/components/InfosTab.vue`
+
+#### SettingsTab.vue
+`entsorga-app/app/components/SettingsTab.vue`
+
+</details>
+
+<details><summary><b>Setup</b></summary>
+
+#### AppInfo.vue
+`entsorga-app/app/components/setup/AppInfo.vue`
+
+#### SetupStreetSelect.vue
+`entsorga-app/app/components/setup/SetupStreetSelect.vue`
+
+#### SetupStreetNumberSelect.vue
+`entsorga-app/app/components/setup/SetupStreetNumberSelect.vue`
+
+#### SetupPushSelect.vue
+`entsorga-app/app/components/setup/SetupPushSelect.vue`
+
+#### SetupPushTimeSelect.vue
+`entsorga-app/app/components/setup/SetupPushTimeSelect.vue`
+
+</details>
+
+<details><summary><b>Secondary</b></summary>
+
+#### StreetSelect.vue
+`entsorga-app/app/components/secondary/StreetSelect.vue`
+
+#### StreetNumberSelect.vue
+`entsorga-app/app/components/secondary/StreetNumberSelect.vue`
+
+#### PushTimeSelect.vue
+`entsorga-app/app/components/secondary/PushTimeSelect.vue`
+
+</details>
+
 ### Mixins
 
+Können in beliebig vielen Komponenten wiederverwendet werden (Referenz: https://vuejs.org/v2/guide/mixins.html)
+
 #### filterStreetNames.js
+`entsorga-app/app/mixins/filterStreetNames.js`
+
+Import von `ranges.json`, Computed Property filtert Liste von Strassennamen basiernd auf Inhalt von `searchBar`, wird in Setup und Einstellungen verwendet
 
 #### pushHandling.js
+`entsorga-app/app/mixins/pushHandling.js`
+
+Import von `nativescript-local-notifications` und `dates.json`, Methoden für folgende Funktionen:
+
+- **permissionGranted:** Abfrage, ob Push-Nachrichten gestattet sind
+- **createNotifications:** Erstellung von benutzerdefinierten Push-Benachrichtigungen, Erstellung von Push-Benachrichtigungen für Papier- und/oder Kartonsammlungen (Inhalt: `id`, `title`, `body`, `image`, `forceShowWhenInForeground`, `at`)
+- **cancelAllNotifications:** Entfernt alle geplanten Benachrichtigungen
+- **requestNotificationPermission:** Prompt für Erlaubnis von Push-Benachrichtigungen
 
 #### pushTime.js
+`entsorga-app/app/mixins/pushTime.js`
+
+Generiert `newPushDay`, `newPushHour` und `newPushMinute`, erster Wert aus Store oder Default-Wert, Änderungen mit Computed Setter und Methode `selectedIndexChanged`, Abruf der Auswahlmöglichkeiten der Liste von möglichen Tagen für Mitteilung, wird in Setup und Einstellungen verwendet
 
 #### resetSettings.js
+`entsorga-app/app/mixins/resetSettings.js`
+
+Methode zum Zurücksetzen der App nach Confirm-Dialog (wenn bestätigt), Navigation zu Setup-Screen, Löschen von ApplicationSettings, Commit von Vuex Mutation `resetState`, Löschen aller geplanten Benachrichtigungen
 
 ### Daten
 
+Für den Prototypen der App wurden die Daten als JSON-Files hinterlegt. Während der Entwicklung wurde auch eine Lösung mit «Firebase» getestet. Dies hatte jedoch Schwierigkeiten mit den Push-Notifications zur Folge, welche dann ebenfalls über einen (kostenpflichtigen) Third-Party Push Service erstellt werden müssen.
+
 #### dates.json
+`entsorga-app/app/assets/dates.json`
+
+Beinhaltet Daten der Sammeltermin für Papier und Karton nach Tour (1, 2 oder 3)
 
 #### infos.json
+`entsorga-app/app/assets/infos.json`
+
+Beinhaltet Daten für Info-Tab mit Informationen zur korrekten Entsorgung verschiedener Wertstoffe
 
 #### places.json
+`entsorga-app/app/assets/places.json`
+
+Beinhaltet Daten für Standorte-Tab mit Titel, Abfalltypen, Koordinaten und URL zu Google-Maps 
 
 #### ranges.json
+`entsorga-app/app/assets/ranges.json`
+
+Beinhaltet Daten der Strassen mit Zuweisung der Touren, folgende Strassen sind in weiter nach Strassenabschnitt unterteilt:
+
+- Giacomettistrasse
+- Gürtelstrasse
+- Kasernenstrasse
+- Quaderstrasse
+- Ringstrasse
+- Untere Plessurstrasse
 
 ### Styling
 
+NativeScript Applikation können, ähnlich wie Websites, mit CSS gestaltet werden. Jedoch wird nur ein Subset von CSS untersützt. Auch Layouts sind ein Spezialfall, welche in NativeScript auf eine andere Art und Weise implementiert sind.
+
 #### variables.scss
+
+In dieser Datei werden die Farben festgelegt, welche als Schrift- und Hintergrundfarben eingesetzt werden können. Weiter werden bestimmte Farben anderen Variablen zugeordnet, wodurch Grundelemente, wie die ActionBar, beeinflusst werden.
 
 #### app.scss
 
+Import von `variables.scss` und Core Theme, globales Styling mit Utility-First Ansatz (Naming-Convetion [Tailwind CSS](https://tailwindcss.com/), NativeScript Custom Elements und Custom Class Components für einzelne Anwendungen
+
 #### Rancho-Regular.ttf
+
+Schriftfamilie für App Icon/Logo Bar, Quelle: [Google Fonts](https://fonts.google.com/specimen/Rancho)
+
+## Simulator/Local Release Build
+
+Die Entwicklung der App mit dem Simulator kann einfach über die Kommandozeile mit den genannten Befehlen gestartet werden. Spätestens wenn die App auf ein angeschlossenes Gerät übertragen werden soll, sollte jedoch auf die Companion App «NativeScript Sidekick» zurückgegriffen werden. Das Programm macht die Erstellung eines Certificate Signing Requests, das Hinterlegen einer iOS Provision und des Zertifikat sehr viel einfacher.
+
+Es besteht auch eine Funktion zum automatischen, kostenlosen Generieren der benötigten Profile und Zertifikate. Zum Zeitpunkt der Entwicklung war diese Option jedoch fehlerhaft (Updates dazu auf [GitHub](https://github.com/NativeScript/sidekick-feedback/issues/435)). Aus diesem Grund muss zum Testen auf iOS-Geräten zwingend ein Apple Developer Account erstellt werden. Im Developer Account sind ein Identifier (ch.mma.entsorga), die verwendeten Geräte (mit UDID) und ein Profil für iOS Development hinterlegt. Die entsprechenden Zertifikate müssen auf dem lokalen Computer, welcher für die Entwicklung verwendet wird, hinterlegt werden.
+
+## Bugs
+
+### Notification Image
+
+In der aktuellen Version des Plugin `nativescript-local-notifications` wird eine veraltete Funktion verwendet, um Bilder zu Push-Benachrichtigung hinzuzufügen. Je nach Gerät und Version wird bei Mitteilungen deshalb teilweise kein Bild dargestellt. Da es sich dabei nur um eine symbolische Zusatzinformation handelt und sich alle Informationen bereits im Mitteilungs-Text befinden, ist dies nicht weiter tragisch. Das Bild würde bei der Mitteilung als kleines Thumbnail und beim längeren Drücken grösser dargestellt werden. Mit einem Update des Plugins wird dieses Problem hoffentlich bald gelöst.
+
+## Verbesserungspotenzial
+
+### Handling von Daten
+
+Die Daten für die Zuweisung zu Touren, Standorten und Abfallarten sind als einfache JSON-Files hinterlegt. Müssten diese nach der Veröffentlichung geändert werden, müsste auch die App geupdatet werden. Alternativ könnten diese Daten in einer externen Datenbank erfasst werden (z.B. Firebase).
+
+### Weisser Screen beim Start
+
+Beim ersten Start der App ersheint nach dem Splash Screen manchmal für den Bruchteil einer Sekunde ein weisser Screen, welcher bisher nicht identifiziert werden konnte. Dieser ist etwas störend, beeinflusst die Benutzerführung aber nicht weiter. Vermutlich handelt es sich dabei um den Zeitpunkt, zu dem die Route (Setup-Screen oder Home-Screen) noch nicht definiert ist.
+
+### Push-Mitteilungen
+
+Für Papier- und Kartonsammlungen könnte die Auswahl von unterschiedlichen Zeitpunkten der Erinnerungen implementiert werden. Weiter wäre auch das wiederholte Erinnern an einen Termin denkbar.
+
+### Technisches Handling von Push-Mitteilungen
+
+Die Push-Mitteilungen werden einfachheitshalber lokal erstellt. Alternative könnte dafür ein Third-Party Service konfiguriert werden (z.B. Firebase Cloud Messaging). Evtl. kommen damit aber auch andere Probleme auf, sodass User sich registrieren müssten. Dies kam bis anhin bewusst nicht in Frage.
+
+### Inhaltssuche
+
+In den Tabs «Standorte» und «Infos» könnte eine Suchfunktion implementiert werden, um die Inhalte zu filtern/durchsuchen.
