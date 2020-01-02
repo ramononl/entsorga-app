@@ -2,9 +2,6 @@
   <ScrollView class="w-full">
     <FlexboxLayout flexDirection="column" justifyContent="center" class="page-padding">
       <Label textWrap="true" text="Meine nächsten Sammeltermine" class="h1 p-x-20"/>
-      <!-- <Button @tap="onTapHasPermission" class="btn" text="Has Permission?"></Button>
-      <Button @tap="createNotifications" class="btn" text="Schedule Notification"></Button>
-      <Button @tap="cancelAllNotifications" class="btn" text="Cancel notifications"></Button> -->
       <FlexboxLayout justifyContent="space-between" alignItems="center" flexWrap="wrap" class="p-x-20 p-y-10">
         <Label text="Adresse" class="text-pink-100 font-bold" flexGrow="0"/>
         <Label :text="userAddress" class="text-pink-100"/>
@@ -38,7 +35,6 @@
 </template>
 
 <script>
-// import { pushHandling } from "../mixins/pushHandling";
 import dates from "~/assets/dates.json";
 
 export default {
@@ -54,7 +50,6 @@ export default {
       dates: dates.tours
     }
   },
-  // mixins: [pushHandling],
   computed: {
     tour() {
       return this.$store.state.user.tour;
