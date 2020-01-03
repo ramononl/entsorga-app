@@ -33,17 +33,17 @@ Die entsorga App beinhaltet **Informationen**, **Tipps** und **Hinweise** rund u
 
 - Startscreen mit Informationen zur App
 - Setup-Prozess für erste Einrichtung
-- Auswahl der Wohnadresse (Hausnr. je nach Strasse)
+- Auswahl der Wohnadresse (Hausnummer bei gewissen Strasse)
 - Mittelungen für Papier- und Kartonsammlungen
   - Lokale Push-Mitteilungen
   - Optional, individuell auswählbar
   - Festlegung des Zeitpunktes der Mitteilung
 - Übersicht über nächste Sammeltermine
-- Daten in JSON-Files
 - Entsorgungsstellen in Listen- und Kartenansicht
 - Informationen zu korrekter Entsorgung
 - Einstellungen jederzeit änderbar
-- «App zurücksetzen»
+- Daten in JSON-Files
+- «App zurücksetzen»-Funktion
 
 ## 🧩 Ressourcen
 
@@ -126,13 +126,15 @@ rm -rf platforms
 
 ## 🏡 Aufbau
 
-Bei NativeScript handelt es sich um ein Open Source Framework, welches die Erstellung von JavaScript-Native-Apps ermöglicht. Daraus resultieren bestimmte Vorteile gegenüber hybriden Apps (Preformance, native APIs) und Native-Apps (nur eine Codebase). NativeScript kann mit Vanilla JavaScript/TypScript, Angular, Vue.js und bald auch React verwendet werden.
+![NativeScript Vue](https://entsorga.ramon.onl/assets/github/nsvue.png)
+
+Bei NativeScript handelt es sich um ein Open Source Framework, welches die Erstellung von JavaScript-Native-Apps ermöglicht. Daraus resultieren bestimmte Vorteile gegenüber hybriden Apps (Preformance, native APIs) und Native-Apps (nur eine Codebase). NativeScript kann mit Vanilla JavaScript/TypeScript, Angular, Vue.js und bald auch React verwendet werden.
 
 Für unser App (entsorga) haben wir uns für die Kombination von NativeScript und Vue.js entschieden. Verglichen mit Vue.js fürs Web gibt es bei NativeScript-Vue drei grosse Unterschiede:
 
 - **Library:** NativeScript-Vue Package statt Standard Vue.js Library
 - **DOM-Manipulation:** Vue-Instanz wird keinem Element zugewiesen
-- **Templates:** NativeScript-Module mit XML statt semantisches HTML
+- **Templates:** NativeScript-Module mit XML statt semantischem HTML
 
 ### Grundlagen
 
@@ -166,7 +168,7 @@ Icons und Bilder in sechs Grössen (hdpi, ldpi, mdpi, xhdpi, xxhdpi, xxxhdpi), d
 
 ### Komponenten
 
-Wie mit Vue.js üblich, bauen NativeScript-Vue Apps auf Komponenten auf. Neben den integrierten Modulen/Komponenten kann das Template und die Logik beliebig in Komponenten aufgeteilt werden. Die Kommunikation zwischen Komponenten ist identisch zu Vue.js im Web. Im entsorga App kommen zur Kommunikation Props, Custom Events ($emit) und Vuex zum Einsatz.
+Wie mit Vue.js üblich, bauen NativeScript-Vue Apps auf Komponenten auf. Neben den integrierten Modulen/Komponenten können die Templates und die Logik beliebig in Komponenten aufgeteilt werden. Die Kommunikation zwischen Komponenten ist identisch zu Vue.js im Web. Im entsorga App kommen zur Kommunikation **Props**, **Custom Events** ($emit) und **Vuex** zum Einsatz.
 
 <details><summary><b>General</b></summary>
 
@@ -184,6 +186,35 @@ Hauptlayout der App, Beinhaltet `LogoBar`, eine Custom Tab-Navigation mit GridLa
 `entsorga-app/app/components/common/LogoBar.vue`
 
 Die LogoBar-Komponente besteht aus einem einfachen Template und wird in `Setup.vue` und `App.vue` eingebunden.
+
+</details>
+
+<details><summary><b>Setup</b></summary>
+
+#### AppInfo.vue
+`entsorga-app/app/components/setup/AppInfo.vue`
+
+StackLayout des **1. Setup-Schrittes**, Informationen zu Funktionalität der App, nächster Schritt durch Custom Event `nextstep`
+
+#### SetupStreetSelect.vue
+`entsorga-app/app/components/setup/SetupStreetSelect.vue`
+
+StackLayout des **2. Setup-Schrittes**, Auswahl der Wohnadresse mit Mixin `filterStreetNames`, Custom Events abhängig von ausgewählter Strasse (wenn Unterteilung in Strassenabschnitte `nextstep` mit `SetupStreetNumberSelect`, ansonsten `store`-Events und `nextstep` von `SetupPushSelect`)
+
+#### SetupStreetNumberSelect.vue
+`entsorga-app/app/components/setup/SetupStreetNumberSelect.vue`
+
+StackLayout des **3. Setup-Schrittes**, wird nur ausgeführt, wenn ausgewählte Strasse für Spezialtouren in Strassenabschnitte unterteilt wird, Validierung der Eingaben mit der vom letzten Schritt übergebenen Property `streetName`, Validierung ergibt Wert `invalid` von `true` (gültig) oder `false` (ungültig), Custom Events für `store` und `nextstep` (zurück und weiter)
+
+#### SetupPushSelect.vue
+`entsorga-app/app/components/setup/SetupPushSelect.vue`
+
+StackLayout des **4. Setup-Schrittes**, Konfigurieren der Push-Benachrichtigungen, Auswahl Papier/Karton, Anzeige der Aufforderung, die Zustellung von Mitteilungen zu erlauben, Ausführung der `store`-Events, `nextstep` zu `SetupPushTimeSelect` oder Ausführung von `setstore` (wenn keine Mitteilungen aktiviert wurden)
+
+#### SetupPushTimeSelect.vue
+`entsorga-app/app/components/setup/SetupPushTimeSelect.vue`
+
+StackLayout des **5. Setup-Schrittes**, wird nur ausgeführt, wenn Push-Benachrichtigungen aktiviert wurden, Auswahl des Tages und der Uhrzeit der Benachrichtigung mit ListPicker und TimePicker (Mixin `pushTime`), Methode `nextStep` führt Custom Event `setstore` in `Setup.vue` aus, wodurch der Store und Push-Mitteilungen erstellt werden
 
 </details>
 
@@ -211,41 +242,28 @@ ScrollView des Tabs **Einstellungen**, ermöglicht das Aktivieren/Deaktivieren v
 
 </details>
 
-<details><summary><b>Setup</b></summary>
-
-#### AppInfo.vue
-`entsorga-app/app/components/setup/AppInfo.vue`
-
-#### SetupStreetSelect.vue
-`entsorga-app/app/components/setup/SetupStreetSelect.vue`
-
-#### SetupStreetNumberSelect.vue
-`entsorga-app/app/components/setup/SetupStreetNumberSelect.vue`
-
-#### SetupPushSelect.vue
-`entsorga-app/app/components/setup/SetupPushSelect.vue`
-
-#### SetupPushTimeSelect.vue
-`entsorga-app/app/components/setup/SetupPushTimeSelect.vue`
-
-</details>
-
 <details><summary><b>Secondary</b></summary>
 
 #### StreetSelect.vue
 `entsorga-app/app/components/secondary/StreetSelect.vue`
 
+Eigene Page, welche über Einstellungen-Tab geöffnet wird, um Wohnadresse zu ändern, wird eine andere Strasse ausgewählt, wird diese entweder direkt mit dazugehöriger Tour im Store gespeichert und die Push-Notifications erstellt oder der Nutzer wird zur Komponente `StreetNumberSelect.vue` weitergeleitet, es werden die Mixins `pushHandling` und `filterStreetNames` eingesetzt
+
 #### StreetNumberSelect.vue
 `entsorga-app/app/components/secondary/StreetNumberSelect.vue`
 
+Eigene Page zur Auswahl der Hausnummer, wenn dies aufgrund der ausgewählten Strasse nötig ist (Strasse für Spezialtouren in Abschnitte aufgeteilt), die Eingabe wird in der Methode `onItemTab` überprüft und anschliessend im Store gespeichert, die nötigen Push-Benachrichtigungen werden über das Mixin `pushHandling` erstellt
+
 #### PushTimeSelect.vue
 `entsorga-app/app/components/secondary/PushTimeSelect.vue`
+
+Eigene Page, um den Zeitpunkt der Mitteilungen anzupassen, die Funktionalitäten sind über das Mixin `pushTime` implementiert, die Daten werden in der Methode `onItemTap` im Store gespeichert und die Push-Benachrichtigungen über das Mixin `pushHandling` erstellt
 
 </details>
 
 ### Mixins
 
-Können in beliebig vielen Komponenten wiederverwendet werden (Referenz: https://vuejs.org/v2/guide/mixins.html)
+Können in beliebig vielen Komponenten wiederverwendet werden ([Referenz](https://vuejs.org/v2/guide/mixins.html))
 
 #### filterStreetNames.js
 `entsorga-app/app/mixins/filterStreetNames.js`
@@ -262,6 +280,8 @@ Import von `nativescript-local-notifications` und `dates.json`, Methoden für fo
 - **cancelAllNotifications:** Entfernt alle geplanten Benachrichtigungen
 - **requestNotificationPermission:** Prompt für Erlaubnis von Push-Benachrichtigungen
 
+![Sample Notification](https://entsorga.ramon.onl/assets/github/popup.gif)*Beispiel Push-Mitteilung*
+
 #### pushTime.js
 `entsorga-app/app/mixins/pushTime.js`
 
@@ -274,7 +294,7 @@ Methode zum Zurücksetzen der App nach Confirm-Dialog (wenn bestätigt), Navigat
 
 ### Daten
 
-Für den Prototypen der App wurden die Daten als JSON-Files hinterlegt. Während der Entwicklung wurde auch eine Lösung mit «Firebase» getestet. Dies hatte jedoch Schwierigkeiten mit den Push-Notifications zur Folge, welche dann ebenfalls über einen (kostenpflichtigen) Third-Party Push Service erstellt werden müssen.
+Für den Prototypen der App wurden die Daten als **JSON-Files** hinterlegt. Während der Entwicklung wurde auch eine Lösung mit «Firebase» getestet. Dies hatte jedoch Schwierigkeiten mit den Push-Notifications zur Folge, welche dann ebenfalls über einen (kostenpflichtigen) Third-Party Push Service erstellt werden müssen.
 
 #### dates.json
 `entsorga-app/app/assets/dates.json`
@@ -325,9 +345,9 @@ Schriftfamilie für App Icon/Logo Bar, Quelle: [Google Fonts](https://fonts.goog
 
 ## 📱 Simulator/Local Release Build
 
-Die Entwicklung der App mit dem Simulator kann einfach über die Kommandozeile mit den genannten Befehlen gestartet werden. Spätestens wenn die App auf ein angeschlossenes Gerät übertragen werden soll, sollte jedoch auf die Companion App «NativeScript Sidekick» zurückgegriffen werden. Das Programm macht die Erstellung eines Certificate Signing Requests, das Hinterlegen einer iOS Provision und des Zertifikat sehr viel einfacher.
+Die Entwicklung der App mit dem Simulator kann einfach über die Kommandozeile mit den genannten Befehlen gestartet werden. Spätestens wenn die App auf ein angeschlossenes Gerät übertragen werden soll, sollte jedoch auf die Companion App **«NativeScript Sidekick»** zurückgegriffen werden. Das Programm macht die Erstellung eines Certificate Signing Requests, das Hinterlegen einer iOS Provision und des Zertifikat sehr viel einfacher.
 
-Es besteht auch eine Funktion zum automatischen, kostenlosen Generieren der benötigten Profile und Zertifikate. Zum Zeitpunkt der Entwicklung war diese Option jedoch fehlerhaft (Updates dazu auf [GitHub](https://github.com/NativeScript/sidekick-feedback/issues/435)). Aus diesem Grund muss zum Testen auf iOS-Geräten zwingend ein Apple Developer Account erstellt werden. Im Developer Account sind ein Identifier (ch.mma.entsorga), die verwendeten Geräte (mit UDID) und ein Profil für iOS Development hinterlegt. Die entsprechenden Zertifikate müssen auf dem lokalen Computer, welcher für die Entwicklung verwendet wird, hinterlegt werden.
+Es besteht auch eine Funktion zum automatischen, kostenlosen Generieren der benötigten Profile und Zertifikate. Zum Zeitpunkt der Entwicklung war diese Option jedoch fehlerhaft (Updates dazu auf [GitHub](https://github.com/NativeScript/sidekick-feedback/issues/435)). Aus diesem Grund muss zum Testen auf iOS-Geräten zwingend ein **Apple Developer Account** erstellt werden. Im Developer Account sind ein Identifier (ch.mma.entsorga), die verwendeten Geräte (mit UDID) und ein Profil für iOS Development hinterlegt. Die entsprechenden Zertifikate müssen auf dem Computer, welcher für die Entwicklung verwendet wird, hinterlegt werden.
 
 ## 🐞 Bugs
 
