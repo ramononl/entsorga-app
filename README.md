@@ -156,7 +156,7 @@ Vuex Store für State Management währenddem die App gestartet ist, enthält Def
 #### App_Resources
 `entsorga-app/app/App_Resources/iOS`
 
-Icons und Bilder in jeweils drei Grössen (1x, 2x, 3x), Dateinamen müssen identisch mit Android-Versionen sein
+Icons und Bilder in jeweils drei Grössen (**1x, 2x, 3x**), Dateinamen müssen identisch mit Android-Versionen sein
 
 `entsorga-app/app/App_Resources/iOS/Assets.xcassets`
 
@@ -164,7 +164,7 @@ App Icons und Launch Screen Bilder in unterschiedlichen Grössen
 
 `entsorga-app/app/App_Resources/Android/src/main/res`
 
-Icons und Bilder in sechs Grössen (hdpi, ldpi, mdpi, xhdpi, xxhdpi, xxxhdpi), dürfen nicht in Unterordner sortiert werden, keine Sonderzeichen in Dateinamen
+Icons und Bilder in sechs Grössen (**hdpi, ldpi, mdpi, xhdpi, xxhdpi, xxxhdpi**), dürfen nicht in Unterordner sortiert werden, keine Sonderzeichen in Dateinamen
 
 ### Komponenten
 
@@ -280,7 +280,7 @@ Import von `nativescript-local-notifications` und `dates.json`, Methoden für fo
 - **cancelAllNotifications:** Entfernt alle geplanten Benachrichtigungen
 - **requestNotificationPermission:** Prompt für Erlaubnis von Push-Benachrichtigungen
 
-![Sample Notification](https://entsorga.ramon.onl/assets/github/popup.gif)*Beispiel Push-Mitteilung*
+![Sample Notification](https://entsorga.ramon.onl/assets/github/popup.gif)
 
 #### pushTime.js
 `entsorga-app/app/mixins/pushTime.js`
