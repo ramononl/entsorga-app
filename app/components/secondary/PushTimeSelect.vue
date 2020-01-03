@@ -1,9 +1,9 @@
 <template>
   <Page>
-    <ActionBar title="Zeitpunkt wählen">
-      <ActionItem @tap="onCancel" ios.systemIcon="1" ios.position="left" text="Abbrechen" android.position="popup" />
+    <ActionBar title="Zeitpunkt">
+      <ActionItem @tap="onCancel" ios.position="left" text="Abbrechen" android.position="popup" class="text-sm"/>
       <NavigationButton text="" visibility="collapsed"/>
-      <ActionItem @tap="onItemTap" ios.systemIcon="3" ios.position="right" text="Sichern" android.position="popup" />
+      <ActionItem @tap="onItemTap" ios.position="right" text="Sichern" android.position="popup" class="text-sm"/>
     </ActionBar>
     <StackLayout class="page-bg-secondary">
       <Label text="Tag der Benachrichtigung" class="section-description"/>

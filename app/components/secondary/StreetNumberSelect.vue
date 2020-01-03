@@ -4,7 +4,6 @@
       <NavigationButton text />
       <ActionItem
         @tap="onItemTap"
-        ios.systemIcon="3"
         ios.position="right"
         text="Sichern"
         android.position="popup"
