@@ -33,7 +33,7 @@ Die entsorga App beinhaltet **Informationen**, **Tipps** und **Hinweise** rund u
 
 - Startscreen mit Informationen zur App
 - Setup-Prozess für erste Einrichtung
-- Auswahl der Wohnadresse (Hausnummer bei gewissen Strasse)
+- Auswahl der Wohnadresse (Hausnummer bei gewissen Strassen)
 - Mittelungen für Papier- und Kartonsammlungen
   - Lokale Push-Mitteilungen
   - Optional, individuell auswählbar
