@@ -314,7 +314,7 @@ Beinhaltet Daten für Standorte-Tab mit Titel, Abfalltypen, Koordinaten und URL 
 #### ranges.json
 `entsorga-app/app/assets/ranges.json`
 
-Beinhaltet Daten der Strassen mit Zuweisung der Touren, folgende Strassen sind in weiter nach Strassenabschnitt unterteilt:
+Beinhaltet Daten der Strassen mit Zuweisung der Touren, folgende Strassen sind weiter nach Strassenabschnitt unterteilt:
 
 - Giacomettistrasse
 - Gürtelstrasse
